@@ -441,8 +441,6 @@ pricing terminal:
   [Launch, revise, or reject — and can you defend that to French and Italian distributors?],
 )
 
-Sections 6 and 7 frame the decision moment and the governance tensions that surround it.
-
 = 6. The decision
 
 At 09:52, your video tile appears in the Luxembourg pricing committee queue. Your head of
@@ -504,7 +502,63 @@ or reopens structuring with revised terms.
 
 #v(0.8em)
 #text(size: 9pt, fill: luma(100))[
-  _Section 7 discusses governance, suitability, and the tension between press narrative and
-  PRIIPs scenario communication._
+  _Section 7 outlines the governance tensions that sit alongside the pricing decision._
 ]
+
+= 7. Governance and open tensions
+
+Even with a defensible fair-value range, this launch sits at the intersection of three
+regimes that do not always speak the same language: *desk economics*, *retail disclosure*,
+and *distributor sales practice*.
+
+== Press narrative versus PRIIPs scenarios
+
+The August press dossier supports a constructive healthcare story — recovery, re-rating,
+M&A visibility. It is useful for opening adviser conversations. It is *not* a substitute
+for product-level risk disclosure. PRIIPs requires prescribed performance scenarios over
+defined horizons; the moderate scenario in particular can understate headline coupon
+language if clients focus on the 6% annual equivalent rather than conditionality, barriers,
+and early autocall mechanics. Compliance's concern is not whether healthcare is a good
+sector, but whether advisers can explain what the *note* does when the index path is
+unfavourable.
+
+== Target market and suitability
+
+Exhibit A describes a target market of advised retail and private-banking clients with a
+buy-and-hold compatible horizon and tolerance for barrier and issuer risk. That profile is
+broad. Product governance asks whether the *same* structure should be sold to a French
+private-banking client attracted by the Les Echos recovery narrative and an Italian retail
+client comparing headline coupons against a competitor certificate — when the economic
+terms may need revision to meet internal margin standards. Suitability is not only
+"can the client bear loss?" but "is this the right product at this price for this client
+channel?"
+
+== Sales language under scrutiny
+
+Several phrases already circulating in distributor channels would draw scrutiny if the
+note launched unchanged at uneconomic terms:
+
+- *"6% healthcare income"* — obscures that coupons are conditional and non-memory.
+- *"Protected down to 40%"* — common shorthand for a 60% barrier; easy to misread as
+  capital guarantee above the barrier on every date, not only at final valuation.
+- *"Healthcare recovery play"* — conflates sector equity exposure with structured-note
+  payoff mechanics and issuer credit.
+
+The desk does not need to draft marketing copy in the committee room, but it cannot ignore
+what sales is likely to say once a launch confirmation goes out.
+
+== Competitor pressure versus issuer discipline
+
+Italian distributors will compare Meridian's headline to Intesa-style alternatives (Exhibit E).
+French distributors care more about thematic fit and adviser materials. Neither comparison
+relieves the structurer of the 1.5% margin floor. A product launched to "match the street"
+at sub-economic terms shifts loss to the issuer and creates conduct risk if the KID
+moderate scenario contradicts the pitch. The governance question is where to draw the line
+between commercial flexibility and product discipline.
+
+== Where the case ends
+
+You leave the committee with a single actionable outcome: confirm launch on revised terms,
+delay and redesign, or reject. The exhibits that follow provide the term sheet, press
+context, KID excerpt, market inputs, and competitor scan needed to support that judgement.
 

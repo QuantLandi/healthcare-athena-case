@@ -16,7 +16,7 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 | Component | Format | Status |
 |-----------|--------|--------|
-| Case narrative (8–12 pp.) | Typst → PDF | **§1–2** draft |
+| Case narrative (8–12 pp.) | Typst → PDF | **§1–7** draft (exhibits appended separately) |
 | Exhibits A–E | Typst → PDF | **A, B1, B2, D** done · C, E pending |
 | MC pricer spreadsheet | Excel | Planned |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
