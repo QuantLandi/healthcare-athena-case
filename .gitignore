@@ -22,3 +22,4 @@ __pycache__/
 
 # Typst cache (optional — uncomment if you prefer not to track)
 # .typst/
+PLAN.md
