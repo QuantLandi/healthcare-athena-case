@@ -95,7 +95,7 @@
         #v(0.5em)
         #text(size: 9.5pt, fill: luma(100))[#date]
       ]
-      #if author != none [
+      #if author != none and watermark == none [
         #v(0.4em)
         #text(size: 9.5pt, fill: luma(100))[#author]
       ]
