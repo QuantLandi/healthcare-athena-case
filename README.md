@@ -16,22 +16,22 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 | Component | Format | Status |
 |-----------|--------|--------|
-| Case narrative (8–12 pp.) | Typst → PDF | **§1–7** draft (exhibits appended separately) |
-| Exhibits A–E | Typst → PDF | **A–E** done |
+| **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — narrative §1–7 + exhibits A–E, watermarked |
+| Exhibits A–E (sources) | Typst fragments | In `content/` (bundled into the pack) |
 | MC pricer spreadsheet | Excel | Planned |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
 | Shared Typst template | `lib.typ` | Ready |
 
-### Available now (PDF + source)
+### Exhibits in the pack
 
-| Exhibit | Description | PDF | Source |
-|---------|-------------|-----|--------|
-| **A** | Anonymized Athena term sheet | [PDF](exhibits/A_term_sheet.pdf) | [Typst](exhibits/A_term_sheet.typ) |
-| **B1** | FT Adviser summary (EN) | [PDF](exhibits/B1_ft_adviser_summary.pdf) | [Typst](exhibits/B1_ft_adviser_summary.typ) |
-| **B2** | Les Echos Investir summary (FR) | [PDF](exhibits/B2_lesechos_summary.pdf) | [Typst](exhibits/B2_lesechos_summary.typ) |
-| **C** | PRIIPs KID excerpt | [PDF](exhibits/C_kid_excerpt.pdf) | [Typst](exhibits/C_kid_excerpt.typ) |
-| **D** | Market data (27 Nov 2026) | [PDF](exhibits/D_market_data.pdf) | [Typst](exhibits/D_market_data.typ) |
-| **E** | Competitor scan (Italy) | [PDF](exhibits/E_competitor_scan.pdf) | [Typst](exhibits/E_competitor_scan.typ) |
+| Exhibit | Description | Source |
+|---------|-------------|--------|
+| **A** | Anonymized Athena term sheet | [`content/exhibit_a.typ`](content/exhibit_a.typ) |
+| **B1** | FT Adviser summary (EN) | [`content/exhibit_b1.typ`](content/exhibit_b1.typ) |
+| **B2** | Les Echos Investir summary (FR) | [`content/exhibit_b2.typ`](content/exhibit_b2.typ) |
+| **C** | PRIIPs KID excerpt | [`content/exhibit_c.typ`](content/exhibit_c.typ) |
+| **D** | Market data (27 Nov 2026) | [`content/exhibit_d.typ`](content/exhibit_d.typ) |
+| **E** | Competitor scan (Italy) | [`content/exhibit_e.typ`](content/exhibit_e.typ) |
 
 ---
 
@@ -39,21 +39,15 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 ```
 healthcare-athena-case/
-├── README.md                 ← you are here
-├── LICENSE                   ← CC BY-NC 4.0 (Alexandre Landi)
-├── PLAN.md                   ← master plan & Case Centre checklist
-├── lib.typ                   ← shared Typst template
-├── athena_healthcare_case.typ       ← case narrative + PDF
-├── exhibits/
-│   ├── *.typ
-│   └── *.pdf                        ← same basename as each .typ
-├── teaching_note/
-│   └── instructor_guide.typ         ← + PDF (planned)
-└── spreadsheet/
-    └── athena_pricer.xlsx           ← planned
+├── README.md
+├── LICENSE                          ← CC BY-NC 4.0 (Alexandre Landi)
+├── PLAN.md                          ← master plan & Case Centre checklist
+├── lib.typ                          ← shared Typst template
+├── athena_healthcare_case_pack.typ  ← full pack + watermarked PDF (main deliverable)
+├── content/                         ← case body + exhibit fragments
+├── teaching_note/                   ← instructor guide (planned)
+└── spreadsheet/                     ← MC pricer (planned)
 ```
-
-Empty folders are not tracked; create them when adding new deliverables.
 
 ---
 
@@ -62,23 +56,17 @@ Empty folders are not tracked; create them when adding new deliverables.
 Requires [Typst](https://typst.app/) ≥ 0.14. From the repo root:
 
 ```sh
-typst compile --root . exhibits/A_term_sheet.typ
-typst compile --root . exhibits/B1_ft_adviser_summary.typ
-typst compile --root . exhibits/B2_lesechos_summary.typ
-typst compile --root . exhibits/C_kid_excerpt.typ
-typst compile --root . exhibits/D_market_data.typ
-typst compile --root . exhibits/E_competitor_scan.typ
-typst compile --root . athena_healthcare_case.typ
+typst compile --root . athena_healthcare_case_pack.typ
 ```
 
-PDFs are written next to each `.typ` source (e.g. `exhibits/A_term_sheet.pdf`).
+The pack PDF combines the narrative and Exhibits A–E, with a diagonal watermark and matching footer (*date · Work in progress · Alexandre Landi*).
 
 ---
 
 ## Audience
 
-- **Students** — case narrative, exhibits, and spreadsheet assignment (when complete).
-- **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst workflow or fork exhibits.
+- **Students** — the watermarked pack PDF (and spreadsheet assignment when complete).
+- **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst sources under `content/`.
 
 See [`PLAN.md`](PLAN.md) for learning objectives, exhibit catalogue, assignment prompts, and Case Centre submission roadmap.
 

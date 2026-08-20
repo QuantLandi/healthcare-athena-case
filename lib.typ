@@ -3,12 +3,41 @@
 #let case-title = "Healthcare Athena Autocallable"
 #let case-author = "Alexandre Landi"
 
+#let wip-line(
+  author: case-author,
+  date: none,
+  label: "Work in progress",
+) = {
+  if date != none {
+    [#date · #label · #author]
+  } else {
+    [#label · #author]
+  }
+}
+
+#let wip-watermark(
+  author: case-author,
+  date: none,
+  label: "Work in progress",
+) = {
+  place(
+    center + horizon,
+    rotate(
+      -35deg,
+      text(36pt, fill: rgb(180, 180, 180, 35%), weight: "medium")[
+        #wip-line(author: author, date: date, label: label)
+      ],
+    ),
+  )
+}
+
 #let doc(
   title: none,
   subtitle: none,
   date: none,
   author: case-author,
   lang: "en",
+  watermark: none,
   body,
 ) = {
   set text(size: 10.5pt, lang: lang)
@@ -24,6 +53,13 @@
   set page(
     paper: "a4",
     margin: (x: 2.2cm, y: 2.4cm),
+    background: if watermark != none {
+      wip-watermark(
+        author: watermark.at("author", default: author),
+        date: watermark.at("date", default: none),
+        label: watermark.at("label", default: "Work in progress"),
+      )
+    },
     header: context {
       if counter(page).get().first() > 1 [
         #set text(size: 8.5pt, fill: luma(120))
@@ -34,7 +70,15 @@
     },
     footer: context [
       #set text(size: 8.5pt, fill: luma(120))
-      #author
+      #if watermark != none [
+        #wip-line(
+          author: watermark.at("author", default: author),
+          date: watermark.at("date", default: none),
+          label: watermark.at("label", default: "Work in progress"),
+        )
+      ] else [
+        #author
+      ]
       #h(1fr)
       #counter(page).display("1 / 1", both: true)
     ],
