@@ -1,0 +1,24 @@
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Excel temp / lock files
+~$*.xlsx
+~$*.xls
+*.xlk
+
+# Python (optional future notebook)
+.venv/
+__pycache__/
+*.pyc
+.python-version
+
+# Typst cache (optional — uncomment if you prefer not to track)
+# .typst/
