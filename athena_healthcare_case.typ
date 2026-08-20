@@ -352,3 +352,94 @@ your committee decision.
   instructor diagram can be added later as Exhibit F._
 ]
 
+= 5. Data and constraints
+
+You arrive at committee with a deliberately *mixed* pack: some inputs are frozen, others
+remain judgement calls. The desk rule is that pricing must be reproducible from the
+documents on the table — not from live market feeds or post-fixing index prints.
+
+== Locked inputs
+
+The following are fixed for this decision:
+
+#table(
+  columns: (auto, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt + luma(200),
+  [*Item*], [*Source / value*],
+  [Trade date / initial fixing], [27 November 2026 · $S_0$ = 2,318.47 — Exhibit D],
+  [Issue date], [1 December 2026 (today)],
+  [Proposed structure], [6% p.a. conditional · 60% barrier · annual autocall at 100% — Exhibit A],
+  [Issue price], [100% of €1,000 denomination],
+  [EUR discount curve], [Observation-date OIS discount factors — Exhibit D],
+  [Index decrement], [5% p.a. continuous ($q$); already embedded in published index level],
+  [Margin floor], [1.5% gross structuring margin to bank],
+)
+
+Repricing on "today's" spot or swap levels is out of scope. The committee is judging whether
+*these* terms are economic at *this* snapshot.
+
+== Judgement calls (documented)
+
+Two areas require explicit assumptions in your presentation:
+
++ *Volatility.* No listed options exist on the decrement index. Exhibit D gives a desk
+  working range of *16–18%* flat Black vol and sector context; you must choose one level,
+  justify it, and show sensitivity (at minimum ±2 vol points).
++ *Discounting convention.* Base case is OIS discounting from Exhibit D. A funding overlay
+  (+25 bp vs OIS) is sometimes applied to unsecured note cash-flows; the committee will
+  ask whether you used it and why.
+
+Everything else needed for a first-pass Monte Carlo fair value should flow from Exhibits A
+and D alone.
+
+== Regulatory and commercial constraints
+
+Beyond fair value, approval depends on consistency across three lenses:
+
+#enum(
+  [*Internal economics* — fair value at 100% issue and gross margin vs the 1.5% floor.],
+  [*PRIIPs KID* — prescribed moderate / unfavourable / favourable scenarios and risk
+  indicator must not contradict defensible marketing (Exhibit C, draft).],
+  [*MiFID II target market* — product governance: advised retail, buy-and-hold compatible
+  horizon, clients who can bear barrier and issuer risk (Exhibit A, target-market summary).],
+)
+
+Sales has already circulated a *"6% healthcare income"* headline. Compliance will not
+object to thematic language if the KID and internal model support it; they *will* object if
+the moderate scenario implies a return profile that advisers cannot square with the pitch.
+
+== Materials still in flux
+
+Not every attachment is final as you walk into the room:
+
+#table(
+  columns: (auto, 1fr, auto),
+  inset: 6pt,
+  stroke: 0.5pt + luma(200),
+  table.header([*Document*], [*Role*], [*Status*]),
+  [Term sheet (Exhibit A)], [Legal mechanics and schedule], [Final draft],
+  [Market-data pack (Exhibit D)], [Spot, curve, vol context, observation DFs], [Final],
+  [KID excerpt (Exhibit C)], [Retail scenario disclosure], [Draft — tied to your FV run],
+  [Competitor scan (Exhibit E)], [Italian headline comparison vs Intesa-style product], [Finalising this morning],
+  [Press dossier (B1–B2)], [Commercial narrative only], [Final],
+)
+
+The competitor scan matters for *distribution* (can Meridian match Italian headline
+economics?) but does not replace your own fair-value work. The KID draft cannot be signed
+until your volatility choice and fair value are on record.
+
+== What the committee expects from you
+
+In practical terms, you must be ready to answer four questions without opening a live
+pricing terminal:
+
+#enum(
+  [What is fair value of the proposed terms at 100% issue, and what gross margin does that imply?],
+  [If margin is below 1.5%, what *one* revised lever (coupon, barrier, autocall trigger, or issue price) restores it?],
+  [Does the PRIIPs moderate scenario support or undermine the sales story?],
+  [Launch, revise, or reject — and can you defend that to French and Italian distributors?],
+)
+
+Sections 6 and 7 frame the decision moment and the governance tensions that surround it.
+
