@@ -26,9 +26,9 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 | Exhibit | Description | PDF | Source |
 |---------|-------------|-----|--------|
-| **A** | Anonymized Athena term sheet | [PDF](case/exhibits/A_term_sheet.pdf) | [Typst](case/exhibits/A_term_sheet.typ) |
-| **B1** | FT Adviser summary (EN) | [PDF](case/exhibits/B1_ft_adviser_summary.pdf) | [Typst](case/exhibits/B1_ft_adviser_summary.typ) |
-| **B2** | Les Echos Investir summary (FR) | [PDF](case/exhibits/B2_lesechos_summary.pdf) | [Typst](case/exhibits/B2_lesechos_summary.typ) |
+| **A** | Anonymized Athena term sheet | [PDF](exhibits/A_term_sheet.pdf) | [Typst](exhibits/A_term_sheet.typ) |
+| **B1** | FT Adviser summary (EN) | [PDF](exhibits/B1_ft_adviser_summary.pdf) | [Typst](exhibits/B1_ft_adviser_summary.typ) |
+| **B2** | Les Echos Investir summary (FR) | [PDF](exhibits/B2_lesechos_summary.pdf) | [Typst](exhibits/B2_lesechos_summary.typ) |
 
 ---
 
@@ -40,11 +40,10 @@ healthcare-athena-case/
 ├── LICENSE                   ← CC BY-NC 4.0 (Alexandre Landi)
 ├── PLAN.md                   ← master plan & Case Centre checklist
 ├── lib.typ                   ← shared Typst template
-├── case/
-│   ├── athena_healthcare_case.typ   ← case narrative + PDF (planned)
-│   └── exhibits/
-│       ├── *.typ
-│       └── *.pdf                    ← same basename as each .typ
+├── athena_healthcare_case.typ       ← case narrative + PDF (planned)
+├── exhibits/
+│   ├── *.typ
+│   └── *.pdf                        ← same basename as each .typ
 ├── teaching_note/
 │   └── instructor_guide.typ         ← + PDF (planned)
 └── spreadsheet/
@@ -60,12 +59,12 @@ Empty folders are not tracked; create them when adding new deliverables.
 Requires [Typst](https://typst.app/) ≥ 0.14. From the repo root:
 
 ```sh
-typst compile --root . case/exhibits/A_term_sheet.typ
-typst compile --root . case/exhibits/B1_ft_adviser_summary.typ
-typst compile --root . case/exhibits/B2_lesechos_summary.typ
+typst compile --root . exhibits/A_term_sheet.typ
+typst compile --root . exhibits/B1_ft_adviser_summary.typ
+typst compile --root . exhibits/B2_lesechos_summary.typ
 ```
 
-PDFs are written next to each `.typ` source (e.g. `case/exhibits/A_term_sheet.pdf`).
+PDFs are written next to each `.typ` source (e.g. `exhibits/A_term_sheet.pdf`).
 
 ---
 
