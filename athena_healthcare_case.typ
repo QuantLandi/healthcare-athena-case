@@ -443,3 +443,68 @@ pricing terminal:
 
 Sections 6 and 7 frame the decision moment and the governance tensions that surround it.
 
+= 6. The decision
+
+At 09:52, your video tile appears in the Luxembourg pricing committee queue. Your head of
+desk joins from Paris. Compliance has dialed in with the latest KID draft open. Sales is
+not in the room but is waiting for a go/no-go message before calling the French and Italian
+distribution teams.
+
+You have ten minutes to present:
+
+#enum(
+  [your fair value range under documented assumptions,],
+  [gross margin at 100% issue under the proposed 6% / 60% structure,],
+  [one revised parameter set if the 1.5% floor is not met,],
+  [a launch recommendation that is coherent with KID language and target-market constraints.],
+)
+
+The chair reminds the room that this is not a marketing debate. If economics fail at the
+locked market snapshot, terms must be revised before any launch message is sent. If terms
+are revised, sales needs wording that can be explained quickly to advisers who were already
+teased with a "6% healthcare income" headline.
+
+== Committee pressure points
+
+The discussion quickly narrows to four pressure points:
+
+- *Economics:* whether the proposed package can clear the 1.5% margin floor at 100% issue.
+- *Commercial credibility:* how far terms can move before French and Italian distributors
+  perceive a bait-and-switch.
+- *KID coherence:* whether moderate-scenario disclosures remain defensible under the chosen
+  volatility and discounting assumptions.
+- *Execution timing:* whether there is enough time to revise terms and still hit year-end
+  distribution windows.
+
+No one questions the healthcare story itself. The disagreement is about whether the story
+supports this *specific* package at this *specific* price.
+
+== Your recommendation
+
+You are asked to close with a single recommendation for immediate action:
+
+#table(
+  columns: (auto, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt + luma(200),
+  [*Option A*], [Launch proposed terms unchanged (6% coupon, 60% barrier, 100% issue)],
+  [*Option B*], [Revise terms before launch (adjust one lever and re-clear margin / KID checks)],
+  [*Option C*], [Reject this launch window and re-open later with a redesigned structure],
+)
+
+You are expected to justify the option in one page, including:
+
+- key pricing assumptions and sensitivity anchors,
+- economics versus the 1.5% floor,
+- expected distributor reaction in France and Italy,
+- principal conduct and suitability risks if launched unchanged.
+
+Your recommendation will determine whether Meridian sends a launch confirmation before noon
+or reopens structuring with revised terms.
+
+#v(0.8em)
+#text(size: 9pt, fill: luma(100))[
+  _Section 7 discusses governance, suitability, and the tension between press narrative and
+  PRIIPs scenario communication._
+]
+
