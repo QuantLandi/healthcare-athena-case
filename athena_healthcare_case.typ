@@ -285,3 +285,70 @@ once market data, barriers, and coupon mechanics are priced consistently.
   market inputs follow in Section 4 and Exhibit D._
 ]
 
+= 4. Product brief
+
+The proposed instrument is a five-year *Athena autocallable* on the Euro iSTOXX 50 Future
+Healthcare Tilted NR Decrement 5% index (EUR). In client language, it offers conditional
+quarterly income with potential early redemption if the index is at or above its initial
+level on annual autocall dates. In desk language, it is a path-dependent structure whose
+economics are driven by three linked features: the quarterly coupon condition, annual
+autocall condition, and soft capital barrier at maturity.
+
+For this transaction, headline terms are:
+
+- issue at 100% of €1,000 denomination;
+- 1.50% quarterly coupon (6.00% p.a.) if index >= 60% of initial level on each coupon date;
+- annual autocall if index >= 100% of initial level (2027 to 2030 dates);
+- at final valuation (1 Dec 2031), return 100% if index >= 60%; otherwise redeem pro rata
+  to final index performance.
+
+Full legal wording and date schedule are in *Exhibit A*.
+
+== How the payoff works
+
+The table below is the desk's simplified decision map for committee discussion (not legal
+terms). It focuses on *what decision is taken at each observation date*.
+
+#table(
+  columns: (auto, 1fr, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt + luma(200),
+  table.header([*Date type*], [*Condition on index*], [*Cash-flow consequence*]),
+  [Quarterly coupon date], [Index >= 60% of initial], [Pay 1.50% coupon for that quarter],
+  [Quarterly coupon date], [Index < 60% of initial], [No coupon (non-memory; not recovered later)],
+  [Annual autocall date], [Index >= 100% of initial], [Redeem at 100% + coupon due; note terminates],
+  [Annual autocall date], [Index < 100% of initial], [No autocall; continue to next observation date],
+  [Final valuation (if not autocalled)], [Index >= 60% of initial], [Redeem 100% (+ final coupon if coupon condition met)],
+  [Final valuation (if not autocalled)], [Index < 60% of initial], [Redeem 100% × (Final / Initial) (+ final coupon only if >= 60%)],
+)
+
+== Why this structure is commercially attractive
+
+For distributors, the package is easy to present: a thematic healthcare story, a visible
+coupon number, and partial downside protection versus direct equity exposure. It also
+matches a familiar retail template in France and Italy where annual autocall mechanics are
+well understood by adviser networks.
+
+For the issuer, attractiveness depends on *priceability*, not marketing language alone.
+The same terms that improve client appeal (high coupon, low coupon barrier) can compress
+margin when priced against the 27 November market snapshot. That tension is the center of
+your committee decision.
+
+== Risks and suitability points flagged before committee
+
+- *Complexity risk:* multiple observation dates and conditional cash flows can be
+  misunderstood by end clients.
+- *Barrier risk:* below 60% at final valuation, capital loss is linear with index decline.
+- *Autocall / reinvestment risk:* early redemption occurs in stronger markets, forcing
+  clients to reinvest when comparable yields may be lower.
+- *Issuer credit risk:* notes are unsecured obligations of the issuer.
+- *Scenario communication risk:* PRIIPs moderate scenario may not align with the sales
+  headline unless assumptions are explained clearly.
+
+#v(0.8em)
+#text(size: 9pt, fill: luma(100))[
+  _A full payoff diagram is intentionally not provided here. Students are expected to
+  construct a payoff tree or chart from Exhibit A as part of the assignment; an optional
+  instructor diagram can be added later as Exhibit F._
+]
+
