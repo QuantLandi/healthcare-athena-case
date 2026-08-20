@@ -1,11 +1,3 @@
-#import "/lib.typ": *
-
-#show: doc.with(
-  title: [Pricing a Healthcare Athena],
-  subtitle: [Fair Value, PRIIPs, and the Launch Decision],
-  date: [Banque Meridian · 1 December 2026],
-)
-
 #block(
   fill: luma(248),
   inset: 0.8em,

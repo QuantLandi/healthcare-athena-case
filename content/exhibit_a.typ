@@ -4,12 +4,6 @@
 #let coupon-barrier = calc.round(initial-level * 0.60, digits: 2)
 #let half-level = calc.round(initial-level * 0.50, digits: 2)
 
-#show: doc.with(
-  title: [Exhibit A — Final Terms (Summary)],
-  subtitle: [Healthcare Athena Autocallable Notes due 1 December 2031],
-  date: [Issue date 1 December 2026 · Fictional issuer and terms],
-)
-
 #exhibit-label("A")
 
 #v(0.4em)

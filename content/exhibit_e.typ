@@ -1,11 +1,5 @@
 #import "/lib.typ": *
 
-#show: doc.with(
-  title: [Exhibit E — Competitor Scan (Desk Note)],
-  subtitle: [Italian retail · healthcare-linked autocallables · November 2026],
-  date: [Compiled from public retail documentation · case teaching exhibit],
-)
-
 #exhibit-label("E")
 
 #v(0.4em)
