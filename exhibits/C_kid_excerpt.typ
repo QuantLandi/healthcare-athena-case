@@ -1,5 +1,11 @@
 #import "/lib.typ": *
 
+#show: doc.with(
+  title: [Exhibit C — PRIIPs Key Information Document (Excerpt)],
+  subtitle: [Healthcare Athena Autocallable Notes · ISIN XS2EIB0HC2026],
+  date: [Draft · 1 December 2026 · Fictional KID for case study],
+)
+
 #exhibit-label("C")
 
 #v(0.4em)

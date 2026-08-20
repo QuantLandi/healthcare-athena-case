@@ -1,5 +1,12 @@
 #import "/lib.typ": *
 
+#show: doc.with(
+  title: [Exhibit B2 — Extrait presse (français)],
+  subtitle: [Le secteur pharmaceutique est moins entouré… · Les Echos Investir],
+  date: [13 août 2026 · Extrait abrégé],
+  lang: "fr",
+)
+
 #exhibit-label("B2", lang: "fr")
 
 #v(0.5em)

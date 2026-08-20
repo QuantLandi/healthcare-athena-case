@@ -3,6 +3,12 @@
 #let initial-level = 2318.47
 #let coupon-barrier = calc.round(initial-level * 0.60, digits: 2)
 
+#show: doc.with(
+  title: [Exhibit D — Market Data Snapshot],
+  subtitle: [Trade date / initial fixing · 27 November 2026],
+  date: [Desk close · case-constructed, calibrated to August 2026 markets],
+)
+
 #exhibit-label("D")
 
 #v(0.4em)
@@ -32,7 +38,7 @@
   [*Initial Level $S_0$*], [EUR #initial-level (closing level, 27 November 2026) — *locked*],
   [*Coupon / capital barrier*], [60% × $S_0$ = EUR #coupon-barrier — *proposed* (Exhibit A)],
   [*Autocall barrier*], [100% × $S_0$ = EUR #initial-level — *proposed* (Exhibit A)],
-  [*Implied volatility $sigma$*], [*Student choice:* flat *16.00–18.00%* (Black / GBM); justify from context below],
+  [*Implied volatility $sigma$*], [*Student choice:* flat **16.00–18.00%** (Black / GBM); justify from context below],
   [*Teaching-note reference*], [17.00% flat → fair value ≈ 99.6% at 100% issue],
   [*Dividend / decrement $q$*], [5.00% p.a. continuous — *locked*; do *not* add a further dividend yield],
   [*Discounting*], [EUR OIS zeros in the observation-date table — *locked*],
@@ -144,7 +150,7 @@ reference for a reproducible Monte Carlo.
 
 == Volatility
 
-No listed options exist on ISX5HCTD. The desk works in a *16–18%* flat Black vol band, consistent with:
+No listed options exist on ISX5HCTD. The desk works in a **16–18%** flat Black vol band, consistent with:
 
 - ~17% one-year realised vol on European healthcare indices in 2026;
 - VSTOXX (EURO STOXX 50, 30-day implied) in the mid-teens in August 2026.

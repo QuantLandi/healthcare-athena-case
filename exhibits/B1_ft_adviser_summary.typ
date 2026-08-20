@@ -1,5 +1,11 @@
 #import "/lib.typ": *
 
+#show: doc.with(
+  title: [Exhibit B1 — Press Excerpt (English)],
+  subtitle: [Healthcare shows strong signs of recovery · FT Adviser],
+  date: [11 August 2026 · Abridged excerpt],
+)
+
 #exhibit-label("B1")
 
 #v(0.5em)
