@@ -17,7 +17,7 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 | Component | Format | Status |
 |-----------|--------|--------|
 | Case narrative (8–12 pp.) | Typst → PDF | **§1–7** draft (exhibits appended separately) |
-| Exhibits A–E | Typst → PDF | **A, B1, B2, D** done · C, E pending |
+| Exhibits A–E | Typst → PDF | **A–E** done |
 | MC pricer spreadsheet | Excel | Planned |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
 | Shared Typst template | `lib.typ` | Ready |
@@ -29,7 +29,9 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 | **A** | Anonymized Athena term sheet | [PDF](exhibits/A_term_sheet.pdf) | [Typst](exhibits/A_term_sheet.typ) |
 | **B1** | FT Adviser summary (EN) | [PDF](exhibits/B1_ft_adviser_summary.pdf) | [Typst](exhibits/B1_ft_adviser_summary.typ) |
 | **B2** | Les Echos Investir summary (FR) | [PDF](exhibits/B2_lesechos_summary.pdf) | [Typst](exhibits/B2_lesechos_summary.typ) |
+| **C** | PRIIPs KID excerpt | [PDF](exhibits/C_kid_excerpt.pdf) | [Typst](exhibits/C_kid_excerpt.typ) |
 | **D** | Market data (27 Nov 2026) | [PDF](exhibits/D_market_data.pdf) | [Typst](exhibits/D_market_data.typ) |
+| **E** | Competitor scan (Italy) | [PDF](exhibits/E_competitor_scan.pdf) | [Typst](exhibits/E_competitor_scan.typ) |
 
 ---
 
@@ -41,7 +43,7 @@ healthcare-athena-case/
 ├── LICENSE                   ← CC BY-NC 4.0 (Alexandre Landi)
 ├── PLAN.md                   ← master plan & Case Centre checklist
 ├── lib.typ                   ← shared Typst template
-├── athena_healthcare_case.typ       ← case narrative + PDF (planned)
+├── athena_healthcare_case.typ       ← case narrative + PDF
 ├── exhibits/
 │   ├── *.typ
 │   └── *.pdf                        ← same basename as each .typ
@@ -63,7 +65,9 @@ Requires [Typst](https://typst.app/) ≥ 0.14. From the repo root:
 typst compile --root . exhibits/A_term_sheet.typ
 typst compile --root . exhibits/B1_ft_adviser_summary.typ
 typst compile --root . exhibits/B2_lesechos_summary.typ
+typst compile --root . exhibits/C_kid_excerpt.typ
 typst compile --root . exhibits/D_market_data.typ
+typst compile --root . exhibits/E_competitor_scan.typ
 typst compile --root . athena_healthcare_case.typ
 ```
 
