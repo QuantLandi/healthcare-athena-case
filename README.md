@@ -16,7 +16,7 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 | Component | Format | Status |
 |-----------|--------|--------|
-| **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — narrative §1–7 + exhibits A–E, watermarked |
+| **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — instructor review edition (synopsis + §1–7 + exhibits A–E), watermarked |
 | Exhibits A–E (sources) | Typst fragments | In `content/` (bundled into the pack) |
 | MC pricer spreadsheet | Excel | Planned |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
@@ -59,7 +59,7 @@ Requires [Typst](https://typst.app/) ≥ 0.14. From the repo root:
 typst compile --root . athena_healthcare_case_pack.typ
 ```
 
-The pack PDF combines the narrative and Exhibits A–E, with a diagonal watermark and matching footer (*date · Work in progress · Alexandre Landi*).
+The pack PDF is the **instructor review edition**: a one-page synopsis and pack map, then the case narrative and Exhibits A–E, with a diagonal watermark and matching footer (*date · Work in progress · Alexandre Landi*). A separate student PDF (without the instructor page) is planned for classroom release.
 
 ---
 

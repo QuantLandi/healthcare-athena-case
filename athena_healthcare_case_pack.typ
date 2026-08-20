@@ -4,7 +4,7 @@
 
 #show: doc.with(
   title: [Healthcare Athena Autocallable],
-  subtitle: [Complete case pack — narrative and exhibits A–E],
+  subtitle: [Instructor review pack — narrative and exhibits A–E],
   date: [#pack-date · Work in progress · #case-author],
   watermark: (
     author: case-author,
@@ -13,6 +13,7 @@
   ),
 )
 
+#include "/content/instructor_front.typ"
 #include "/content/case_body.typ"
 
 #pagebreak()
