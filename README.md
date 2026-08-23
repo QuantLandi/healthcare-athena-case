@@ -4,7 +4,7 @@
 [![Status: Work in progress](https://img.shields.io/badge/status-work%20in%20progress-orange)](PLAN.md)
 [![Typst](https://img.shields.io/badge/built%20with-Typst-239dad)](https://typst.app/)
 
-**Author:** Alexandre Landi
+**Author:** [Alexandre Landi](https://www.linkedin.com/in/quantlandi/)
 
 Take-home case study for advanced finance courses: price and launch a **Phoenix autocallable** on a **healthcare index** for EU retail, grounded in August 2026 financial press (FT Adviser + Les Echos Investir). Retail distributors sometimes label similar notes *Athena*; the case uses desk terminology throughout.
 
