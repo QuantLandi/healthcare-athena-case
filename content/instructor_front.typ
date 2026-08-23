@@ -32,7 +32,7 @@ pressure, and MiFID II governance.
   [*Level*], [MSc Finance / advanced undergrad derivatives course],
   [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; basic Excel or MC],
   [*Deliverables (planned)*], [MC fair value · one revised lever · launch recommendation · short compliance memo],
-  [*Model answer (draft)*], [*Revise* at proposed terms; σ ≈ 17%; fair value ≈ 99.6% at 100% issue],
+  [*Model answer (draft)*], [*Revise* at proposed terms; σ ≈ 17%; fair value below 100% at 100% issue],
 )
 
 == Learning objectives

@@ -33,7 +33,6 @@
   [*Coupon / capital barrier*], [60% × $S_0$ = EUR #coupon-barrier — *proposed* (Exhibit A)],
   [*Autocall barrier*], [100% × $S_0$ = EUR #initial-level — *proposed* (Exhibit A)],
   [*Implied volatility $sigma$*], [*Student choice:* flat *16.00–18.00%* (Black / GBM); justify from context below],
-  [*Teaching-note reference*], [17.00% flat → fair value ≈ 99.6% at 100% issue],
   [*Dividend / decrement $q$*], [5.00% p.a. continuous — *locked*; do *not* add a further dividend yield],
   [*Discounting*], [EUR OIS zeros in the observation-date table — *locked*],
   [*Funding (optional)*], [+25 bp to OIS zero — extra credit only; DF funded column],
