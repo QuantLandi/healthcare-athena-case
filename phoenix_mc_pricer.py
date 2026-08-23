@@ -31,6 +31,16 @@ Implementation notes:
   - Work is processed in blocks with streaming mean/variance, so peak memory is
     set by --block-size rather than by total path count.
 
+Pipeline (one pricing block):
+
+    main / solve_coupon_for_margin
+      -> price_grid                         orchestrate blocks, vol sweep, CRN
+           -> cumulative_rate_drift         (r - q) t from OIS DFs
+           -> brownian_grid                 shocks -> W(t) on observation grid
+           -> levels_from_brownian          W(t) + sigma -> index levels
+           -> discounted_pv                 Exhibit A payoff -> PV per path
+           -> RunningStats -> PriceResult    streaming mean / SE
+
 Usage:
     uv run phoenix_mc_pricer.py --paths 50000
     uv run phoenix_mc_pricer.py --until-converged --sigma 0.17 --verbose

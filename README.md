@@ -18,7 +18,7 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 |-----------|--------|--------|
 | **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — instructor review edition (synopsis + §1–7 + exhibits A–E), watermarked |
 | Exhibits A–E (sources) | Typst fragments | In `content/` (bundled into the pack) |
-| MC pricer spreadsheet | Excel | Planned |
+| MC pricer | Python (`phoenix_mc_pricer.py`) | Ready |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
 | Shared Typst template | `lib.typ` | Ready |
 
@@ -45,9 +45,59 @@ healthcare-athena-case/
 ├── lib.typ                          ← shared Typst template
 ├── athena_healthcare_case_pack.typ  ← full pack + watermarked PDF (main deliverable)
 ├── content/                         ← case body + exhibit fragments
+├── phoenix_mc_pricer.py             ← Monte Carlo fair-value pricer
+├── pyproject.toml                   ← uv project (numpy)
 ├── teaching_note/                   ← instructor guide (planned)
-└── spreadsheet/                     ← MC pricer (planned)
 ```
+
+---
+
+## Monte Carlo pricer
+
+Self-contained reference pricer for the Phoenix autocallable (Exhibits A and D). Requires [uv](https://docs.astral.sh/uv/):
+
+```sh
+uv run phoenix_mc_pricer.py --paths 50000
+uv run phoenix_mc_pricer.py --until-converged --sigma 0.17 --verbose
+uv run phoenix_mc_pricer.py --coupon-pa 0.05 --coupon-barrier 0.55
+uv run phoenix_mc_pricer.py --solve-margin
+```
+
+### Pipeline
+
+```mermaid
+flowchart TD
+    main[main] --> pg[price_grid]
+    solver[solve_coupon_for_margin] --> pg
+
+    subgraph block["One block inside price_grid"]
+        direction LR
+        crd[cumulative_rate_drift] --> lfb[levels_from_brownian]
+        bg[brownian_grid] --> lfb
+        lfb --> pv[discounted_pv] --> stats[RunningStats]
+    end
+
+    pg --> block
+    pg --> result[PriceResult]
+
+    main --> report[print_report / print_solver_report]
+    result --> report
+```
+
+One block inside `price_grid` draws shocks once, builds a volatility-independent Brownian grid, then prices every sigma in the sweep on the same paths (common random numbers).
+
+### Functions
+
+| Function | Role | In → Out |
+|----------|------|----------|
+| `cumulative_rate_drift` | Rate drift from OIS DFs (or flat rate) | rate mode → `(N_OBS,)` drift |
+| `brownian_grid` | Random shocks → Brownian paths | shocks → `(N_OBS, n_paths)` |
+| `levels_from_brownian` | GBM index levels at one σ | Brownian + σ → levels |
+| `discounted_pv` | Exhibit A payoff, path-by-path PV | levels + terms → PV vector |
+| `RunningStats` | Streaming mean / SE across blocks | batches of PVs → stats |
+| `price_grid` | Orchestrator: blocks, CRN, vol sweep | σ list + terms → `list[PriceResult]` |
+| `solve_coupon_for_margin` | Bisect coupon to hit margin target | σ + target → revised terms |
+| `main` | CLI wiring only | argv → printed report |
 
 ---
 
