@@ -145,7 +145,7 @@ determined by the Calculation Agent as follows:
   ],
   [Index Level ≥ 60% × $S_0$ at Final Valuation], [100.00% of Specified Denomination + final coupon (if any)],
   [Index Level < 60% × $S_0$ at Final Valuation], [
-    $ "Specified Denomination" times "Index Level" / S_0 $ + final coupon (if any)
+    $ "Specified Denomination" times "Index Level" / S_0 $
   ],
 )
 
