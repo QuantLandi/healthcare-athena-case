@@ -16,7 +16,7 @@ Take-home case study for advanced finance courses: price and launch a **Phoenix 
 
 | Component | Format | Status |
 |-----------|--------|--------|
-| **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — instructor review edition (synopsis + §1–7 + exhibits A–E), watermarked |
+| **Complete pack (WIP)** | Typst → PDF | [`healthcare_phoenix_case_pack.pdf`](healthcare_phoenix_case_pack.pdf) — instructor review edition (synopsis + §1–7 + exhibits A–E), watermarked |
 | Exhibits A–E (sources) | Typst fragments | In `case/` (bundled into the pack) |
 | MC pricer | Python (`phoenix_mc_pricer.py`) | Ready |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
@@ -38,12 +38,12 @@ Take-home case study for advanced finance courses: price and launch a **Phoenix 
 ## Repository layout
 
 ```
-healthcare-athena-case/
+healthcare-phoenix-case/
 ├── README.md
 ├── LICENSE                          ← CC BY-NC 4.0 (Alexandre Landi)
 ├── PLAN.md                          ← master plan & Case Centre checklist
 ├── lib.typ                          ← shared Typst template
-├── athena_healthcare_case_pack.typ  ← full pack + watermarked PDF (main deliverable)
+├── healthcare_phoenix_case_pack.typ ← full pack + watermarked PDF (main deliverable)
 ├── case/                         ← case body + exhibit fragments
 ├── phoenix_mc_pricer.py             ← Monte Carlo fair-value pricer
 ├── pyproject.toml                   ← uv project (numpy)
@@ -106,7 +106,7 @@ One block inside `price_grid` draws shocks once, builds a volatility-independent
 Requires [Typst](https://typst.app/) ≥ 0.14. From the repo root:
 
 ```sh
-typst compile --root . athena_healthcare_case_pack.typ
+typst compile --root . healthcare_phoenix_case_pack.typ
 ```
 
 The pack PDF is the **instructor review edition**: a one-page synopsis and pack map, then the case narrative and Exhibits A–E, with a diagonal watermark and matching footer (*date · Work in progress · Alexandre Landi*). A separate student PDF (without the instructor page) is planned for classroom release.
