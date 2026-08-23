@@ -26,7 +26,7 @@ changes today.
 The desk sits in *Paris*, a short walk from the wealth-management floors that feed
 French and cross-border distribution. Final *pricing committee* approval for retail
 issuance, however, is convened in *Luxembourg*, where the bank's structured-products
-platform books most EU retail notes. On issue days you work both locations remotely until
+platform books most EU retail notes. On issue days you work with both locations remotely until
 the committee meets: Paris for distributor dialogue, Luxembourg for governance and sign-off.
 
 Banque Meridian distributes through branch networks and external platforms in *France*,
