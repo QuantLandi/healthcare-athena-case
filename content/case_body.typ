@@ -40,7 +40,7 @@ but they will not sign a KID that your fair-value work cannot support.
 == The desk and the pipeline
 
 Your team of eight structurers covers equity-linked and credit-linked retail notes,
-typically *Athena* autocallables and soft-barrier income products on single indices or
+typically *Phoenix* and *Athena* autocallables and soft-barrier income products on single indices or
 thematic baskets. Distributors want *simple stories*: a sector recovery, a familiar index,
 a conditional coupon that sounds generous next to deposit rates. They want *fast*
 turnaround when a theme is in the press. The head of Structured Products (Retail) sets a
@@ -61,7 +61,7 @@ before calendars shut and keep Meridian visible with key distributors.
 
 == Your role today
 
-Over the past week you have assembled the working pack for a five-year *healthcare Athena*
+Over the past week you have assembled the working pack for a five-year *healthcare Phoenix*
 on the *Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5%* index: proposed terms
 (Exhibit A), market data as of the *27 November* trade date (Exhibit D), draft KID
 excerpts, and a competitor scan still being finalised (Exhibit E). The trade was fixed
@@ -93,7 +93,7 @@ The email is reproduced as received; the memo follows.
     *From:* Marie-Cécile Fontaine, Head of Structured Products (Retail) \
     *To:* Retail Structuring — Junior Desk \
     *Date:* Friday, 28 November 2026, 18:42 \
-    *Subject:* RE: Healthcare Athena — *need pricing pack for Monday committee*
+    *Subject:* RE: Healthcare Phoenix — *need pricing pack for Monday committee*
   ]
 
   #v(0.6em)
@@ -137,7 +137,7 @@ The email is reproduced as received; the memo follows.
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Reference*], [BM-SP/2026/HC-ATH-047],
+  [*Reference*], [BM-SP/2026/HC-PHX-047],
   [*Date*], [28 November 2026],
   [*Issue date*], [1 December 2026 (trade fixed 27 November 2026)],
   [*Owner*], [Junior structurer, Retail SP desk (Paris)],
@@ -164,13 +164,13 @@ broad index family is already in their pipeline (the competitor scan is still in
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Product*], [Healthcare Athena Autocallable Notes due 1 December 2031],
+  [*Product*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
   [*Underlying*], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5% (EUR)],
   [*Structure*], [6% p.a. conditional coupon · 60% coupon/capital barrier · annual autocall at 100%],
   [*Issue price*], [100% of €1,000 denomination],
   [*Target notional*], [EUR 50 million],
   [*Distribution*], [France (lead), Italy, Luxembourg],
-  [*Terms*], [Attached summary term sheet — HC-ATH-047-TS],
+  [*Terms*], [Attached summary term sheet — HC-PHX-047-TS],
 )
 
 Issuer: *European Investment Bank SA* (Luxembourg) — existing programme issuer for Meridian
@@ -207,7 +207,7 @@ autocall, or issue-price parameters and a clear *launch / revise / reject* recom
   inset: 6pt,
   stroke: 0.5pt + luma(200),
   table.header([*Document*], [*Description*], [*Status*]),
-  [Term sheet], [Healthcare Athena — final terms (HC-ATH-047-TS)], [Final draft],
+  [Term sheet], [Healthcare Phoenix — final terms (HC-PHX-047-TS)], [Final draft],
   [Press dossier], [FT Adviser + Les Echos excerpts (August)], [Final],
   [KID draft], [PRIIPs key information document], [Draft — pending your FV],
   [Market-data pack], [Index level, curve, vol inputs — 27 Nov fixing], [Final],
@@ -264,7 +264,7 @@ economics on comparable certificates, not French media coverage itself.
 
 Internally, the desk reads both articles as *commercial support* rather than valuation
 evidence for the note itself. They can justify why clients are willing to discuss
-healthcare exposure at year-end, but they do not determine whether the proposed Athena
+healthcare exposure at year-end, but they do not determine whether the proposed Phoenix
 terms are economically sound at 100% issue with a 1.5% margin target.
 
 This distinction matters for the committee: the same press narrative that strengthens the
@@ -279,12 +279,20 @@ once market data, barriers, and coupon mechanics are priced consistently.
 
 = 4. Product brief
 
-The proposed instrument is a five-year *Athena autocallable* on the Euro iSTOXX 50 Future
+The proposed instrument is a five-year *Phoenix autocallable* on the Euro iSTOXX 50 Future
 Healthcare Tilted NR Decrement 5% index (EUR). In client language, it offers conditional
 quarterly income with potential early redemption if the index is at or above its initial
 level on annual autocall dates. In desk language, it is a path-dependent structure whose
 economics are driven by three linked features: the quarterly coupon condition, annual
 autocall condition, and soft capital barrier at maturity.
+
+Desk terminology distinguishes *Phoenix* from classic *Athena*: a Phoenix has *separate*
+coupon and autocall barriers, and pays a conditional coupon whenever the coupon condition
+is met — even if the note is not autocalled. A classic *Athena* aligns those barriers;
+coupons are typically accumulated and paid together with redemption when the autocall
+trigger fires. This transaction is a Phoenix (60% coupon barrier, 100% autocall barrier,
+non-memory coupons). Retail marketing may still use *Athena* on similar notes; the term
+sheet in Exhibit A follows desk naming.
 
 For this transaction, headline terms are:
 

@@ -3,7 +3,7 @@
 #let pack-date = "20 August 2026"
 
 #show: doc.with(
-  title: [Healthcare Athena Autocallable],
+  title: [Healthcare Phoenix Autocallable],
   subtitle: [Instructor review pack — narrative and exhibits A–E],
   date: [#pack-date · Work in progress · #case-author],
   watermark: (
@@ -27,7 +27,7 @@
 #align(center)[
   #text(size: 14pt, weight: "bold")[Exhibit A — Final Terms (Summary)]
   #v(0.2em)
-  #text(size: 9.5pt, fill: luma(100))[Healthcare Athena Autocallable Notes due 1 December 2031]
+  #text(size: 9.5pt, fill: luma(100))[Healthcare Phoenix Autocallable Notes due 1 December 2031]
 ]
 #v(0.8em)
 #include "/content/exhibit_a.typ"

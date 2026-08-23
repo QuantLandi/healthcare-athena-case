@@ -1,6 +1,6 @@
 // Shared styles — case study deliverables
 
-#let case-title = "Healthcare Athena Autocallable"
+#let case-title = "Healthcare Phoenix Autocallable"
 #let case-author = "Alexandre Landi"
 
 #let wip-line(

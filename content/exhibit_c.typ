@@ -24,7 +24,7 @@
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Product*], [Healthcare Athena Autocallable Notes due 1 December 2031],
+  [*Product*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
   [*Manufacturer / Issuer*], [European Investment Bank SA (Luxembourg)],
   [*Producer*], [Banque Meridian — Structured Products (Retail)],
   [*ISIN*], [XS2EIB0HC2026],

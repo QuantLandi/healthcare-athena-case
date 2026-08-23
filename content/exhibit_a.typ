@@ -16,7 +16,9 @@
 )[
   #text(size: 9pt)[
     *Case fiction.* European Investment Bank SA, ISIN, and terms are invented for this case study.
-    Structure calibrated to standard EU retail *Athena* autocallables (cf. industry term sheets).
+    Structure calibrated to standard EU retail *Phoenix* autocallables (cf. industry term sheets).
+    Retail distributors sometimes label similar notes *Athena*; desk terminology reserves
+    *Athena* for structures where coupon and autocall share a single barrier.
   ]
 ]
 
@@ -28,7 +30,7 @@
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Product name*], [Healthcare Athena Autocallable Notes due 1 December 2031],
+  [*Product name*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
   [*ISIN*], [XS2EIB0HC2026],
   [*Common code*], [EIBHC2031],
   [*Issuer*], [European Investment Bank SA (Luxembourg)],

@@ -24,7 +24,7 @@ Banque Meridian · Structured Products (Retail) · *BM-SP/2026/HC-COMP-01* · 30
 
 == Purpose
 
-Banca Lombarda requested a side-by-side view of Meridian's proposed healthcare Athena
+Banca Lombarda requested a side-by-side view of Meridian's proposed healthcare Phoenix
 (Exhibit A) against a competing Italian retail issue already in their Q4 pipeline. This
 note is for *distribution positioning* only; competitor fair value is *not* provided.
 
@@ -40,7 +40,7 @@ note is for *distribution positioning* only; competitor fair value is *not* prov
       [*Meridian (proposed)*],
       [*Competitor A*],
     ),
-    [Product type], [Athena autocallable], [Athena autocallable],
+    [Product type], [Phoenix autocallable], [Athena autocallable (retail label)],
     [Issuer (public)], [European Investment Bank SA], [Major Italian retail bank (programme issuer)],
     [Underlying], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5%], [Same index (ISX5HCTD)],
     [Issue / maturity], [1 Dec 2026 / 1 Dec 2031 (5Y)], [15 Sep 2026 / 15 Sep 2030 (4Y)],

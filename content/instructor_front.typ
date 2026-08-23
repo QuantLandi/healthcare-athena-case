@@ -16,7 +16,7 @@
 == Synopsis
 
 Take-home decision case: a junior structurer at Banque Meridian must recommend whether to
-*launch*, *revise*, or *reject* a five-year healthcare *Athena* autocallable for EU retail,
+*launch*, *revise*, or *reject* a five-year healthcare *Phoenix* autocallable for EU retail,
 fixed at the *27 November 2026* market snapshot. Proposed terms (6% conditional coupon,
 60% barrier, 100% issue) are expected to fall short of the desk's *1.5%* gross margin once
 priced by Monte Carlo. Students reconcile fair value, PRIIPs KID language, distributor
@@ -37,7 +37,7 @@ pressure, and MiFID II governance.
 
 == Learning objectives
 
-+ Decompose an *Athena* into elementary payoffs.
++ Decompose a *Phoenix* autocallable into elementary payoffs.
 + Price a path-dependent note by Monte Carlo using locked Exhibit D inputs.
 + Link commercial narrative (Exhibits B1–B2) to product terms and spot mismatches.
 + Interpret PRIIPs KID scenarios (Exhibit C) vs internal fair value.
@@ -52,7 +52,7 @@ pressure, and MiFID II governance.
   table.header([*Section*], [*Content*]),
   [Case §1–2], [Setting · head-of-desk memo and launch ask (28 Nov 2026)],
   [Case §3], [Market context · pointer to press exhibits],
-  [Case §4], [Product brief · Athena mechanics],
+  [Case §4], [Product brief · Phoenix mechanics (vs Athena)],
   [Case §5], [Data and constraints · locked vs judgement inputs],
   [Case §6], [The decision · committee presentation (1 Dec 2026)],
   [Case §7], [Governance · press vs KID · suitability],
