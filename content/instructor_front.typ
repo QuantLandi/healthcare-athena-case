@@ -30,7 +30,7 @@ pressure, and MiFID II governance.
   stroke: 0.5pt + luma(200),
   [*Format*], [Take-home assignment · ~6–8 h student work],
   [*Level*], [MSc Finance / advanced undergrad derivatives course],
-  [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; basic Excel or MC],
+  [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; Monte Carlo (Excel or Python)],
   [*Deliverables (planned)*], [MC fair value · one revised lever · launch recommendation · short compliance memo],
   [*Model answer (draft)*], [*Revise* at proposed terms; σ ≈ 17%; fair value below 100% at 100% issue],
 )
@@ -66,8 +66,9 @@ pressure, and MiFID II governance.
 
 #v(0.6em)
 #text(size: 9pt, fill: luma(100))[
-  _Still to build for classroom release: Monte Carlo spreadsheet, full teaching note (assignment
-  prompts + model answers), and a student-facing PDF without this instructor page._
+  _Still to build for classroom release: full teaching note (assignment prompts + model
+  answers) and a student-facing PDF without this instructor page. Reference MC pricer:
+  `phoenix_mc_pricer.py` in the repo root._
 ]
 
 #pagebreak()

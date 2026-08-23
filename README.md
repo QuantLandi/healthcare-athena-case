@@ -1,4 +1,4 @@
-# Healthcare Athena Autocallable — Case Study
+# Healthcare Phoenix Autocallable — Case Study
 
 [![License: CC BY-NC 4.0](https://img.shields.io/badge/License-CC%20BY--NC%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc/4.0/)
 [![Status: Work in progress](https://img.shields.io/badge/status-work%20in%20progress-orange)](PLAN.md)
@@ -6,7 +6,7 @@
 
 **Author:** Alexandre Landi
 
-Take-home case study for advanced finance courses: price and launch an **Athena autocallable** on a **healthcare index** for EU retail, grounded in August 2026 financial press (FT Adviser + Les Echos Investir).
+Take-home case study for advanced finance courses: price and launch a **Phoenix autocallable** on a **healthcare index** for EU retail, grounded in August 2026 financial press (FT Adviser + Les Echos Investir). Retail distributors sometimes label similar notes *Athena*; the case uses desk terminology throughout.
 
 > **Draft repository.** This GitHub repo is the open, work-in-progress source (Typst sources, instructor materials). A polished, citable edition is planned for [The Case Centre](https://www.thecasecentre.org/).
 
@@ -26,7 +26,7 @@ Take-home case study for advanced finance courses: price and launch an **Athena 
 
 | Exhibit | Description | Source |
 |---------|-------------|--------|
-| **A** | Anonymized Athena term sheet | [`content/exhibit_a.typ`](content/exhibit_a.typ) |
+| **A** | Anonymized Phoenix term sheet | [`content/exhibit_a.typ`](content/exhibit_a.typ) |
 | **B1** | FT Adviser summary (EN) | [`content/exhibit_b1.typ`](content/exhibit_b1.typ) |
 | **B2** | Les Echos Investir summary (FR) | [`content/exhibit_b2.typ`](content/exhibit_b2.typ) |
 | **C** | PRIIPs KID excerpt | [`content/exhibit_c.typ`](content/exhibit_c.typ) |
@@ -115,7 +115,7 @@ The pack PDF is the **instructor review edition**: a one-page synopsis and pack 
 
 ## Audience
 
-- **Students** — the watermarked pack PDF (and spreadsheet assignment when complete).
+- **Students** — the watermarked pack PDF and the Monte Carlo pricer (`phoenix_mc_pricer.py`).
 - **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst sources under `content/`.
 
 See [`PLAN.md`](PLAN.md) for learning objectives, exhibit catalogue, assignment prompts, and Case Centre submission roadmap.
