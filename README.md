@@ -17,7 +17,7 @@ Take-home case study for advanced finance courses: price and launch a **Phoenix 
 | Component | Format | Status |
 |-----------|--------|--------|
 | **Complete pack (WIP)** | Typst → PDF | [`athena_healthcare_case_pack.pdf`](athena_healthcare_case_pack.pdf) — instructor review edition (synopsis + §1–7 + exhibits A–E), watermarked |
-| Exhibits A–E (sources) | Typst fragments | In `content/` (bundled into the pack) |
+| Exhibits A–E (sources) | Typst fragments | In `case/` (bundled into the pack) |
 | MC pricer | Python (`phoenix_mc_pricer.py`) | Ready |
 | Teaching note (instructor guide) | Typst → PDF | Planned |
 | Shared Typst template | `lib.typ` | Ready |
@@ -26,12 +26,12 @@ Take-home case study for advanced finance courses: price and launch a **Phoenix 
 
 | Exhibit | Description | Source |
 |---------|-------------|--------|
-| **A** | Anonymized Phoenix term sheet | [`content/exhibit_a.typ`](content/exhibit_a.typ) |
-| **B1** | FT Adviser summary (EN) | [`content/exhibit_b1.typ`](content/exhibit_b1.typ) |
-| **B2** | Les Echos Investir summary (FR) | [`content/exhibit_b2.typ`](content/exhibit_b2.typ) |
-| **C** | PRIIPs KID excerpt | [`content/exhibit_c.typ`](content/exhibit_c.typ) |
-| **D** | Market data (27 Nov 2026) | [`content/exhibit_d.typ`](content/exhibit_d.typ) |
-| **E** | Competitor scan (Italy) | [`content/exhibit_e.typ`](content/exhibit_e.typ) |
+| **A** | Anonymized Phoenix term sheet | [`case/exhibit_a.typ`](case/exhibit_a.typ) |
+| **B1** | FT Adviser summary (EN) | [`case/exhibit_b1.typ`](case/exhibit_b1.typ) |
+| **B2** | Les Echos Investir summary (FR) | [`case/exhibit_b2.typ`](case/exhibit_b2.typ) |
+| **C** | PRIIPs KID excerpt | [`case/exhibit_c.typ`](case/exhibit_c.typ) |
+| **D** | Market data (27 Nov 2026) | [`case/exhibit_d.typ`](case/exhibit_d.typ) |
+| **E** | Competitor scan (Italy) | [`case/exhibit_e.typ`](case/exhibit_e.typ) |
 
 ---
 
@@ -44,7 +44,7 @@ healthcare-athena-case/
 ├── PLAN.md                          ← master plan & Case Centre checklist
 ├── lib.typ                          ← shared Typst template
 ├── athena_healthcare_case_pack.typ  ← full pack + watermarked PDF (main deliverable)
-├── content/                         ← case body + exhibit fragments
+├── case/                         ← case body + exhibit fragments
 ├── phoenix_mc_pricer.py             ← Monte Carlo fair-value pricer
 ├── pyproject.toml                   ← uv project (numpy)
 ├── teaching_note/                   ← instructor guide (planned)
@@ -116,7 +116,7 @@ The pack PDF is the **instructor review edition**: a one-page synopsis and pack 
 ## Audience
 
 - **Students** — the watermarked pack PDF and the Monte Carlo pricer (`phoenix_mc_pricer.py`).
-- **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst sources under `content/`.
+- **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst sources under `case/`.
 
 See [`PLAN.md`](PLAN.md) for learning objectives, exhibit catalogue, assignment prompts, and Case Centre submission roadmap.
 

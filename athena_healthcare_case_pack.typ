@@ -13,8 +13,8 @@
   ),
 )
 
-#include "/content/instructor_front.typ"
-#include "/content/case_body.typ"
+#include "/case/instructor_front.typ"
+#include "/case/case_body.typ"
 
 #pagebreak()
 #align(center)[
@@ -30,7 +30,7 @@
   #text(size: 9.5pt, fill: luma(100))[Healthcare Phoenix Autocallable Notes due 1 December 2031]
 ]
 #v(0.8em)
-#include "/content/exhibit_a.typ"
+#include "/case/exhibit_a.typ"
 
 #pagebreak()
 #align(center)[
@@ -39,7 +39,7 @@
   #text(size: 9.5pt, fill: luma(100))[Healthcare shows strong signs of recovery · FT Adviser · 11 August 2026]
 ]
 #v(0.8em)
-#include "/content/exhibit_b1.typ"
+#include "/case/exhibit_b1.typ"
 
 #pagebreak()
 #align(center)[
@@ -49,7 +49,7 @@
 ]
 #v(0.8em)
 #set text(lang: "fr")
-#include "/content/exhibit_b2.typ"
+#include "/case/exhibit_b2.typ"
 #set text(lang: "en")
 
 #pagebreak()
@@ -59,7 +59,7 @@
   #text(size: 9.5pt, fill: luma(100))[Draft · ISIN XS2EIB0HC2026]
 ]
 #v(0.8em)
-#include "/content/exhibit_c.typ"
+#include "/case/exhibit_c.typ"
 
 #pagebreak()
 #align(center)[
@@ -68,7 +68,7 @@
   #text(size: 9.5pt, fill: luma(100))[Trade date / initial fixing · 27 November 2026]
 ]
 #v(0.8em)
-#include "/content/exhibit_d.typ"
+#include "/case/exhibit_d.typ"
 
 #pagebreak()
 #align(center)[
@@ -77,4 +77,4 @@
   #text(size: 9.5pt, fill: luma(100))[Italian retail · November 2026]
 ]
 #v(0.8em)
-#include "/content/exhibit_e.typ"
+#include "/case/exhibit_e.typ"
