@@ -75,8 +75,7 @@ pressure, and MiFID II governance.
 == Acknowledgements
 
 #text(size: 9.5pt)[
-  The author thanks *Massimo Passamonti* for expert review of the product mechanics,
-  Phoenix vs Athena terminology, and the Monte Carlo pricing setup.
+  Thanks to *Massimo Passamonti* for expert feedback on product mechanics and terminology.
 ]
 
 #pagebreak()
