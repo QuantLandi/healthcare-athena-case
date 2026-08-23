@@ -71,4 +71,12 @@ pressure, and MiFID II governance.
   `phoenix_mc_pricer.py` in the repo root._
 ]
 
+#v(0.8em)
+== Acknowledgements
+
+#text(size: 9.5pt)[
+  The author thanks *Massimo Passamonti* for expert review of the product mechanics,
+  Phoenix vs Athena terminology, and the Monte Carlo pricing setup.
+]
+
 #pagebreak()

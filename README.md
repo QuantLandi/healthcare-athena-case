@@ -131,6 +131,12 @@ Exhibits B1 and B2 are **abridged summaries**, not full reproductions.
 
 ---
 
+## Acknowledgements
+
+Thanks to [Massimo Passamonti](https://www.linkedin.com/in/massimo-passamonti/) for expert feedback on product mechanics, Phoenix vs Athena terminology, and the Monte Carlo pricing setup.
+
+---
+
 ## License
 
 Copyright © 2026 Alexandre Landi. Licensed under [CC BY-NC 4.0](LICENSE).
