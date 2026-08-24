@@ -1,6 +1,6 @@
 #import "/lib.typ": *
 
-#let pack-date = "20 August 2026"
+#let pack-date = datetime.today().display("[day] [month repr:long] [year]")
 
 #show: doc.with(
   title: [Healthcare Phoenix Autocallable],
