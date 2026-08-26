@@ -6,7 +6,7 @@
 
 **Author:** [Alexandre Landi](https://www.linkedin.com/in/quantlandi/)
 
-Take-home case study for advanced finance courses: price and launch a **Phoenix autocallable** on a **healthcare index** for EU retail, grounded in August 2026 financial press (FT Adviser + Les Echos Investir). Retail distributors sometimes label similar notes *Athena*; the case uses desk terminology throughout.
+Case study for advanced finance courses: price and launch a **Phoenix autocallable** on a **healthcare index** for EU retail, grounded in August 2026 financial press (FT Adviser + Les Echos Investir). Retail distributors sometimes label similar notes *Athena*; the case uses desk terminology throughout.
 
 > **Draft repository.** This GitHub repo is the open, work-in-progress source (Typst sources, instructor materials). A polished, citable edition is planned for [The Case Centre](https://www.thecasecentre.org/).
 
@@ -115,8 +115,8 @@ The pack PDF is the **instructor review edition**: a one-page synopsis and pack 
 
 ## Audience
 
-- **Students** — the watermarked pack PDF and the Monte Carlo pricer (`phoenix_mc_pricer.py`).
-- **Instructors** — full kit including teaching note and model answers; clone this repo to adapt the Typst sources under `case/`.
+- **Students** — the case pack PDF (narrative, §8 Deliverables, exhibits).
+- **Instructors** — full kit including teaching note, model answers, and the reference MC pricer (`phoenix_mc_pricer.py`); clone this repo to adapt the Typst sources under `case/`.
 
 See [`PLAN.md`](PLAN.md) for learning objectives, exhibit catalogue, assignment prompts, and Case Centre submission roadmap.
 

@@ -6,8 +6,9 @@
 )[
   #text(size: 9pt)[
     *Instructor review edition.* This watermarked pack is for adoption review and pilot planning.
-    It is *not* the final student handout: assignment prompts and model answers will live in a
-    separate teaching note; the student case will not include this page.
+    It is *not* the final student handout: rubric and model answers will live in a
+    separate teaching note; the student case will not include this page. Student
+    deliverables are listed in Section 8.
   ]
 ]
 
@@ -15,7 +16,7 @@
 
 == Synopsis
 
-Take-home decision case: a junior structurer at Banque Meridian must recommend whether to
+Decision case: a junior structurer at Banque Meridian must recommend whether to
 *launch*, *revise*, or *reject* a five-year healthcare *Phoenix* autocallable for EU retail,
 fixed at the *27 November 2026* market snapshot. Proposed terms (6% conditional coupon,
 60% barrier, 100% issue) are expected to fall short of the desk's *1.5%* gross margin once
@@ -28,10 +29,10 @@ pressure, and MiFID II governance.
   columns: (auto, 1fr),
   inset: 6pt,
   stroke: 0.5pt + luma(200),
-  [*Format*], [Take-home assignment · ~6–8 h student work],
+  [*Format*], [Individual assignment · ~6–8 h student work],
   [*Level*], [MSc Finance / advanced undergrad derivatives course],
   [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; Monte Carlo (Excel or Python)],
-  [*Deliverables (planned)*], [MC fair value · one revised lever · launch recommendation · short compliance memo],
+  [*Deliverables*], [§8: pricing workbook · payoff diagram · ≤1-page recommendation · short compliance note],
   [*Model answer (draft)*], [*Revise* at proposed terms; σ ≈ 17%; fair value below 100% at 100% issue],
 )
 
@@ -56,6 +57,7 @@ pressure, and MiFID II governance.
   [Case §5], [Data and constraints · locked vs judgement inputs],
   [Case §6], [The decision · committee presentation (1 Dec 2026)],
   [Case §7], [Governance · press vs KID · suitability],
+  [Case §8], [Deliverables · student hand-in checklist],
   [Exhibit A], [Term sheet],
   [Exhibit B1], [FT Adviser excerpt (EN)],
   [Exhibit B2], [Les Echos Investir excerpt (FR)],
@@ -66,9 +68,9 @@ pressure, and MiFID II governance.
 
 #v(0.6em)
 #text(size: 9pt, fill: luma(100))[
-  _Still to build for classroom release: full teaching note (assignment prompts + model
-  answers) and a student-facing PDF without this instructor page. Reference MC pricer:
-  `phoenix_mc_pricer.py` in the repo root._
+  _Still to build for classroom release: full teaching note (rubric + model answers) and a
+  student-facing PDF without this instructor page. Student deliverables are already in
+  Section 8. Reference MC pricer: `phoenix_mc_pricer.py` in the repo root._
 ]
 
 #v(0.8em)

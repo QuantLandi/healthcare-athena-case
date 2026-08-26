@@ -14,10 +14,10 @@
   width: 100%,
 )[
   #text(size: 9pt)[
-    *Case fiction.* Spot, curve, and discount factors below are *locked* for the assignment
-    (27 November 2026 snapshot). Volatility is a *desk range* — students choose and justify
-    a flat $sigma$ within it. Terms in Exhibit A are the *proposed* issue; fair value
-    at 100% is expected to fall short of the 1.5% margin target.
+    *Case fiction.* Spot, curve, and discount factors below are *locked* for this case
+    (27 November 2026 snapshot). Volatility is a *desk range* — choose and justify a flat
+    $sigma$ within it. Terms in Exhibit A are the *proposed* issue to be priced at this
+    snapshot.
   ]
 ]
 
@@ -160,9 +160,8 @@ No listed options exist on ISX5HCTD. The desk works in a *16–18%* flat Black v
   [5Y], [17.0%], [18.5%], [20.5%],
 )
 
-*Student task:* pick one flat ATM vol (5Y column as anchor), state your source, and run ±2 vol-point sensitivities.
+*Task:* pick one flat ATM vol (5Y column as anchor), state your source, and run ±2 vol-point sensitivities.
 The smile is *optional* extra credit; do not mix ATM and 60% vols in the same base-case path set.
-*Instructor reference:* $sigma = 17.00%$ → proposed 6% coupon terms are *too rich* for a 1.5% margin at 100% issue.
 
 == Other desk assumptions
 

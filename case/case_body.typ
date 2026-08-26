@@ -347,9 +347,9 @@ your committee decision.
 
 #v(0.8em)
 #text(size: 9pt, fill: luma(100))[
-  _A full payoff diagram is intentionally not provided here. Students are expected to
-  construct a payoff tree or chart from Exhibit A as part of the assignment; an optional
-  instructor diagram can be added later as Exhibit F._
+  _A full payoff diagram is intentionally not provided here. Construct one from Exhibit A
+  as required in Section 8 (Deliverables); an optional instructor diagram can
+  be added later as Exhibit F._
 ]
 
 = 5. Data and constraints
@@ -502,7 +502,8 @@ or reopens structuring with revised terms.
 
 #v(0.8em)
 #text(size: 9pt, fill: luma(100))[
-  _Section 7 outlines the governance tensions that sit alongside the pricing decision._
+  _Section 7 outlines the governance tensions that sit alongside the pricing decision.
+  Formal deliverables are listed in Section 8._
 ]
 
 = 7. Governance and open tensions
@@ -556,9 +557,53 @@ at sub-economic terms shifts loss to the issuer and creates conduct risk if the 
 moderate scenario contradicts the pitch. The governance question is where to draw the line
 between commercial flexibility and product discipline.
 
-== Where the case ends
+== Where the narrative ends
 
 You leave the committee with a single actionable outcome: confirm launch on revised terms,
-delay and redesign, or reject. The exhibits that follow provide the term sheet, press
-context, KID excerpt, market inputs, and competitor scan needed to support that judgement.
+delay and redesign, or reject. Section 8 states what to submit; Exhibits A–E then provide
+the term sheet, press context, KID excerpt, market inputs, and competitor scan needed to
+support that judgement.
+
+= 8. Deliverables
+
+Formal requirements for this case. Work from the locked *27 November 2026*
+snapshot (Exhibit D) and the proposed terms in Exhibit A unless you revise a lever under
+Option B.
+
+== What to submit
+
+#enum(
+  [*Pricing workbook* (Excel or Python) — Monte Carlo (or equivalent) fair value of the
+    proposed structure at 100% issue, with documented code or formulae.],
+  [*Payoff diagram* — a tree or chart of the Phoenix payoffs constructed from Exhibit A
+    (coupon, autocall, barrier, and maturity capital outcomes).],
+  [*Recommendation memo* (≤ 1 page) — a single choice among Options A / B / C (Section 6),
+    with the justification bullets listed there.],
+  [*Short compliance note* (≤ ½ page) — coherence of internal fair value, sales language
+    ("6% healthcare income"), and the PRIIPs KID moderate scenario (Exhibit C), plus the
+    principal MiFID II target-market / suitability risks if launched unchanged.],
+)
+
+== Required analysis (must appear in the workbook and/or memo)
+
+#enum(
+  [Fair value and implied *gross structuring margin* at the proposed 6% / 60% / 100% issue
+    package.],
+  [An explicit *volatility* choice within the Exhibit D working range, with justification
+    and sensitivity at least ±2 vol points.],
+  [Whether OIS-only discounting or an unsecured funding overlay (+25 bp vs OIS) was used,
+    and why.],
+  [If margin is below the *1.5%* floor: *one* revised lever (coupon, barrier, autocall
+    trigger, or issue price), re-priced margin, and a brief note on expected French /
+    Italian distributor reaction.],
+  [A clear *launch / revise / reject* recommendation consistent with KID language and
+    target-market constraints.],
+)
+
+== Scope notes
+
+- Repricing on live or post-fixing market levels is out of scope.
+- The competitor scan (Exhibit E) informs distribution judgement; it does not replace your
+  own fair-value work.
+- Expected student time: about *6–8 hours*.
 
