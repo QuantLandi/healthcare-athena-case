@@ -29,7 +29,7 @@ pressure, and MiFID II governance.
   columns: (auto, 1fr),
   inset: 6pt,
   stroke: 0.5pt + luma(200),
-  [*Format*], [Individual assignment · ~6–8 h student work],
+  [*Format*], [Individual assignment],
   [*Level*], [MSc Finance / advanced undergrad derivatives course],
   [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; Monte Carlo (Excel or Python)],
   [*Deliverables*], [§8: pricing workbook · payoff diagram · ≤1-page recommendation · short compliance note],

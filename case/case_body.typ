@@ -605,5 +605,4 @@ Option B.
 - Repricing on live or post-fixing market levels is out of scope.
 - The competitor scan (Exhibit E) informs distribution judgement; it does not replace your
   own fair-value work.
-- Expected student time: about *6–8 hours*.
 
