@@ -365,9 +365,10 @@ your committee decision.
 
 = 5. Data and constraints
 
-You arrive at committee with a deliberately *mixed* pack: some inputs are frozen, others
-remain judgement calls. The desk rule is that pricing must be reproducible from the
-documents on the table — not from live market feeds or post-fixing index prints.
+You arrive at committee with a deliberately *mixed* pack: locked inputs are fixed below;
+only volatility and the ALM credit spread require your documented choice. The desk rule is
+that pricing must be reproducible from the documents on the table — not from live market
+feeds or post-fixing index prints.
 
 == Locked inputs
 
