@@ -74,11 +74,10 @@ index was set on *Wednesday 27 November*. The Luxembourg pricing committee meets
 1 December 2026, at 10:00. If validated, issue and settlement are expected around *two
 weeks* later — #sym.bracket.l 15 December 2026 #sym.bracket.r.
 
-You are expected to confirm that the proposed *6%* conditional coupon and *60%* barrier
-structure can be issued at *100%* with at least the desk's *1.5%* margin — or to explain
-why the terms must change before Banque Meridian commits its balance sheet and reputation
-to the distributors waiting in Paris and Milan. The formal request arrived on *Friday
-28 November*, the evening after initial fixing.
+You own the pack: confirm the proposed terms clear the desk margin floor at the quoted
+issue price, or come with revised terms before Meridian commits to distributors in Paris
+and Milan. Economics (100% issue, 1.5% floor, fair value) are set out in the desk rules
+above; the formal request arrived on *Friday 28 November*, the evening after initial fixing.
 
 = 2. The ask
 
@@ -157,17 +156,10 @@ launch / revise / reject recommendation coherent with the KID draft.
 
 == Background
 
-Banque Meridian has marketed thematic equity-linked notes to retail and private-banking
-networks in France, Italy, and Luxembourg throughout 2026. Healthcare equities recovered
-materially in the second half of the year following policy clarity in the US and renewed
-M&A activity in European pharmaceuticals. Press coverage in August — the *FT Adviser*
-recovery piece and the *Les Echos Investir* sector study, bundled as the desk's press
-dossier — revived distributor demand for a *healthcare income* product linked to a
-recognised EU index.
-
-French distributors require a printable product profile before their December client
-events. Italian distributors have indicated that a competitor certificate on the same
-broad index family is already in their pipeline (the competitor scan is still in draft).
+Year-end healthcare slot for Meridian's own France / Italy / Luxembourg networks, driven
+by August press demand (dossier attached) and Italian competitor pressure. Commercial
+detail is in the head-of-desk email above and Section 3; this memo records the transaction
+for committee sign-off.
 
 == Proposed transaction
 
@@ -202,14 +194,15 @@ must be explainable to advisers without undermining credibility.
 The pricing committee will not approve issuance unless the desk confirms:
 
 #enum(
-  [Monte Carlo (or equivalent) *fair value* at the *27 November market snapshot* (attached market-data pack), with documented volatility assumptions.],
+  [Monte Carlo (or equivalent) *fair value* at the *27 November market snapshot* (attached market-data pack), at the desk mid volatility and with documented credit-spread assumptions.],
   [*Gross structuring margin* ≥ *1.5%* of nominal at the proposed *100%* issue price, *or* a revised term sheet that meets the margin floor.],
   [Consistency between internal fair value, proposed marketing language, and the *PRIIPs KID moderate scenario*.],
   [Target-market and suitability assessment under MiFID II product-governance rules.],
 )
 
 If proposed terms are uneconomic, the owner must present *revised* coupon, barrier,
-autocall, or issue-price parameters and a clear *launch / revise / reject* recommendation.
+autocall, maturity, or issue-price parameters and a clear *launch / revise / reject*
+recommendation.
 
 == Materials for committee
 
@@ -306,15 +299,10 @@ sometimes misuse *Athena* as a catch-all label for autocallable income notes. Th
 is a *Phoenix* (separate coupon and autocall barriers). Exhibit A follows that desk
 naming.
 
-For this transaction, headline terms are:
-
-- issue at 100% of €1,000 denomination;
-- 1.50% quarterly coupon (6.00% p.a.) if index >= 60% of initial level on each coupon date;
-- annual autocall if index >= 100% of initial level (2027 to 2030 dates);
-- at final valuation (1 Dec 2031), return 100% if index >= 60%; otherwise redeem pro rata
-  to final index performance.
-
-Full legal wording and date schedule are in *Exhibit A*.
+Headline terms — desk summary only; full legal wording and date schedule in *Exhibit A*:
+100% of €1,000 issue; 6.00% p.a. (1.50% quarterly) if index ≥ 60% of initial; annual
+autocall at ≥ 100% (2027–2030); at final valuation, redeem 100% if ≥ 60%, else pro rata
+to final index performance.
 
 == How the payoff works
 
@@ -367,9 +355,10 @@ your committee decision.
 = 5. Data and constraints
 
 You arrive at committee with a deliberately *mixed* pack: locked inputs are fixed below;
-only volatility and the ALM credit spread require your documented choice. The desk rule is
-that pricing must be reproducible from the documents on the table — not from live market
-feeds or post-fixing index prints.
+only the ALM credit spread requires your documented *choice*. Volatility is a *desk mid*
+agreed with trading — not a junior pick — but you must show how margin moves if vol
+reprices before issue. The desk rule is that pricing must be reproducible from the
+documents on the table — not from live market feeds or post-fixing index prints.
 
 == Locked inputs
 
@@ -385,22 +374,23 @@ The following are fixed for this decision:
   [Expected issue date], [#sym.bracket.l 15 December 2026 #sym.bracket.r (if committee validates)],
   [Proposed structure], [6% p.a. conditional · 60% barrier · annual autocall at 100% — Exhibit A],
   [Issue price], [100% of €1,000 denomination],
+  [Implied volatility], [Desk mid *17%* flat Black (Exhibit D) — agreed with trading; not student-chosen],
   [EUR discount curve], [Observation-date OIS zeros — Exhibit D (locked; hedge / index)],
   [ALM credit grid], [Spreads vs OIS by expected life — Exhibit D; student chooses tenor],
   [Index decrement], [5% p.a. continuous ($q$); already embedded in published index level],
   [Margin floor], [1.5% gross structuring margin to bank],
 )
 
-Repricing on "today's" spot or swap levels is out of scope. The committee is judging whether
-*these* terms are economic at *this* snapshot.
+In practice, the 27 November pack is a *committee reference*: once terms are approved,
+the desk would reprice on then-current market data (and typically leave the underlying
+fixing for issue day) so coupon and margin targets still clear — locking every commercial
+term too early invites distributors or the street to arbitrage you if markets move. For
+*this assignment*, Monte Carlo stays on the frozen snapshot only; do not pull live or
+post-fixing levels. Vol ±1 below stands in for *issue-date repricing risk* if implied vol
+has moved when the note prints.
 
-== Judgement calls (documented)
+== Judgement call and vol risk (documented)
 
-Two areas require explicit assumptions in your presentation:
-
-+ *Volatility.* No listed options exist on the decrement index. Exhibit D gives a desk
-  working range of *16–18%* flat Black vol and sector context; you must choose one level,
-  justify it, and show sensitivity (at minimum ±2 vol points).
 + *Credit spread (frais de crédit).* The OIS curve in Exhibit D is locked and is used for
   the *index / hedge*. Coupons and redemption are unsecured liabilities of *Banque Meridian*:
   they do *not* discount at OIS. Exhibit D gives Meridian ALM / treasury's short grid of
@@ -411,6 +401,15 @@ Two areas require explicit assumptions in your presentation:
   with $ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $ (Exhibit D). A wider spread lowers
   fair value and improves modelled margin. Do not invent a spread outside the grid;
   do not apply the spread to index drift.
++ *Volatility (repricing risk, not a choice).* Base-case fair value uses the desk mid of
+  *17%*. Do *not* pick 16% or 18% to “make the trade work.” Run at least *±1 vol point*
+  (16% / 18%) around that mid and state how much margin would be gained or lost if vol
+  moves before issue. Context for why 17% is the working mid is in Exhibit D.
+
+If proposed terms miss the margin floor, revise a *product* lever — coupon, barrier,
+autocall trigger, *maturity* (e.g. 4.5Y, or a 4/5/6Y schedule protocol), or issue price —
+not the vol assumption. Maturity changes imply a rebuilt observation schedule; state the
+new tenor clearly and re-price consistently.
 
 Everything else needed for a first-pass Monte Carlo fair value should flow from Exhibits A
 and D alone.
@@ -427,41 +426,21 @@ Beyond fair value, approval depends on consistency across three lenses:
   horizon, clients who can bear barrier and issuer risk (Exhibit A, target-market summary).],
 )
 
-Sales has already circulated a *"6% healthcare income"* headline. Compliance will not
-object to thematic language if the KID and internal model support it; they *will* object if
-the moderate scenario implies a return profile that advisers cannot square with the pitch.
+Sales language already in market (memo) must stay coherent with the KID; Section 7 lists
+the phrases under scrutiny.
 
 == Materials still in flux
 
-Not every attachment is final as you walk into the room:
-
-#table(
-  columns: (auto, 1fr, auto),
-  inset: 6pt,
-  stroke: 0.5pt + luma(200),
-  table.header([*Document*], [*Role*], [*Status*]),
-  [Term sheet (Exhibit A)], [Legal mechanics and schedule], [Final draft],
-  [Market-data pack (Exhibit D)], [Spot, curve, vol context, observation DFs], [Final],
-  [KID excerpt (Exhibit C)], [Retail scenario disclosure], [Draft — tied to your FV run],
-  [Competitor scan (Exhibit E)], [Italian headline comparison vs Intesa-style product], [Finalising this morning],
-  [Press dossier (B1–B2)], [Commercial narrative only], [Final],
-)
-
-The competitor scan matters for *distribution* (can Meridian match Italian headline
-economics?) but does not replace your own fair-value work. The KID draft cannot be signed
-until your volatility choice and fair value are on record.
+Pack status for each attachment is in the Section 2 launch memo. As you walk into the
+room, two items remain open: the *KID draft* cannot be signed until your fair value
+and credit-spread choice are on record, and the *competitor scan* is still finalising Monday
+morning. The scan informs *distribution* judgement (can Meridian match Italian headline
+economics?); it does not replace your own fair-value work.
 
 == What the committee expects from you
 
-In practical terms, you must be ready to answer four questions without opening a live
-pricing terminal:
-
-#enum(
-  [What is fair value of the proposed terms at 100% issue, and what gross margin does that imply?],
-  [If margin is below 1.5%, what *one* revised lever (coupon, barrier, autocall trigger, or issue price) restores it?],
-  [Does the PRIIPs moderate scenario support or undermine the sales story?],
-  [Launch, revise, or reject — and can you defend that to French and Italian distributors?],
-)
+Be ready to present without opening a live pricing terminal. The in-room agenda is in
+Section 6; the formal hand-in checklist is in Section 8.
 
 = 6. The decision
 
@@ -475,14 +454,15 @@ You have ten minutes to present:
 #enum(
   [your fair value range under documented assumptions,],
   [gross margin at 100% issue under the proposed 6% / 60% structure,],
-  [one revised parameter set if the 1.5% floor is not met,],
+  [one revised *product* lever if the 1.5% floor is not met (coupon, barrier, autocall,
+    maturity, or issue price — not vol),],
   [a launch recommendation that is coherent with KID language and target-market constraints.],
 )
 
 The chair reminds the room that this is not a marketing debate. If economics fail at the
 locked market snapshot, terms must be revised before any launch message is sent. If terms
-are revised, sales needs wording that can be explained quickly to advisers who were already
-teased with a "6% healthcare income" headline.
+are revised, sales needs wording that can be explained quickly to advisers already primed
+on the pre-marketed coupon headline (Section 7).
 
 == Committee pressure points
 
@@ -493,8 +473,8 @@ The discussion quickly narrows to five pressure points:
   perceive a bait-and-switch.
 - *Fit and priorities:* product–target-market fit, sales wording, and ranking versus other
   offers on the desk — not only fair value and margin.
-- *KID coherence:* whether moderate-scenario disclosures remain defensible under the chosen
-  volatility and discounting assumptions.
+- *KID coherence:* whether moderate-scenario disclosures remain defensible under the desk
+  mid vol, chosen credit spread, and discounting assumptions.
 - *Execution timing:* whether there is enough time to revise terms and still hit year-end
   distribution windows.
 
@@ -510,16 +490,12 @@ You are asked to close with a single recommendation for immediate action:
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   [*Option A*], [Launch proposed terms unchanged (6% coupon, 60% barrier, 100% issue)],
-  [*Option B*], [Revise terms before launch (adjust one lever and re-clear margin / KID checks)],
+  [*Option B*], [Revise terms before launch (adjust one product lever — coupon, barrier, autocall, maturity, or issue price — and re-clear margin / KID checks)],
   [*Option C*], [Reject this launch window and re-open later with a redesigned structure],
 )
 
-You are expected to justify the option in one page, including:
-
-- key pricing assumptions and sensitivity anchors,
-- economics versus the 1.5% floor,
-- expected distributor reaction in France and Italy,
-- principal conduct and suitability risks if launched unchanged.
+Justify the option in the ≤1-page recommendation memo required in Section 8 (assumptions,
+margin vs floor, distributor reaction, conduct / suitability risks).
 
 Your recommendation will determine whether Meridian sends a launch confirmation before noon
 or reopens structuring with revised terms.
@@ -527,7 +503,7 @@ or reopens structuring with revised terms.
 #v(0.8em)
 #text(size: 9pt, fill: luma(100))[
   _Section 7 outlines the governance tensions that sit alongside the pricing decision.
-  Formal deliverables are listed in Section 8._
+  Formal deliverables and required analysis are listed in Section 8._
 ]
 
 = 7. Governance and open tensions
@@ -602,7 +578,9 @@ Option B.
   [*Payoff diagram* — a tree or chart of the Phoenix payoffs constructed from Exhibit A
     (coupon, autocall, barrier, and maturity capital outcomes).],
   [*Recommendation memo* (≤ 1 page) — a single choice among Options A / B / C (Section 6),
-    with the justification bullets listed there.],
+    covering key pricing assumptions and sensitivities, economics versus the 1.5% floor,
+    expected distributor reaction in France and Italy, and principal conduct /
+    suitability risks if launched unchanged.],
   [*Short compliance note* (≤ ½ page) — coherence of internal fair value, sales language
     ("6% healthcare income"), and the PRIIPs KID moderate scenario (Exhibit C), plus the
     principal MiFID II target-market / suitability risks if launched unchanged.],
@@ -612,21 +590,24 @@ Option B.
 
 #enum(
   [Fair value and implied *gross structuring margin* at the proposed 6% / 60% / 100% issue
-    package.],
-  [An explicit *volatility* choice within the Exhibit D working range, with justification
-    and sensitivity at least ±2 vol points.],
+    package, using the desk mid *17%* vol.],
+  [*Vol repricing risk* — fair value / margin at 16% and 18% (±1 vol point around the mid);
+    state how much margin would be at risk if vol moves before issue. Do not change the
+    base-case vol to clear the floor.],
   [The *credit spread* taken from the Exhibit D ALM grid, the *expected life* used to
     choose it, and a one-line justification.],
-  [If margin is below the *1.5%* floor: *one* revised lever (coupon, barrier, autocall
-    trigger, or issue price), re-priced margin, and a brief note on expected French /
-    Italian distributor reaction.],
+  [If margin is below the *1.5%* floor: *one* revised *product* lever (coupon, barrier,
+    autocall trigger, maturity, or issue price), re-priced margin, and a brief note on
+    expected French / Italian distributor reaction.],
   [A clear *launch / revise / reject* recommendation consistent with KID language and
     target-market constraints.],
 )
 
 == Scope notes
 
-- Repricing on live or post-fixing market levels is out of scope.
+- Live or post-fixing market levels are out of scope for the workbook: price the frozen
+  27 November snapshot only. Issue-date repricing is real process (see Section 5) but not
+  a second Monte Carlo run in this case.
 - The competitor scan (Exhibit E) informs distribution judgement; it does not replace your
   own fair-value work.
 

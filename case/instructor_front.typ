@@ -33,7 +33,7 @@ pressure, and MiFID II governance.
   [*Level*], [MSc Finance / advanced undergrad derivatives course],
   [*Prerequisites*], [GBM and discounting; barrier/path-dependent intuition; Monte Carlo (Excel or Python)],
   [*Deliverables*], [§8: pricing workbook · payoff diagram · ≤1-page recommendation · short compliance note],
-  [*Model answer (draft)*], [*Revise* at proposed terms; σ ≈ 17%; fair value below 100% at 100% issue],
+  [*Model answer (draft)*], [*Revise* a product lever at σ = 17% desk mid; ±1 vol = repricing risk; FV below 100% at 100% issue],
 )
 
 == Learning objectives
@@ -54,7 +54,7 @@ pressure, and MiFID II governance.
   [Case §1–2], [Setting · head-of-desk memo and launch ask (28 Nov 2026)],
   [Case §3], [Market context · pointer to press exhibits],
   [Case §4], [Product brief · Phoenix mechanics (vs Athena)],
-  [Case §5], [Data and constraints · locked vs judgement inputs],
+  [Case §5], [Data and constraints · locked mid vol · credit choice · product levers],
   [Case §6], [The decision · committee presentation (1 Dec 2026)],
   [Case §7], [Governance · press vs KID · suitability],
   [Case §8], [Deliverables · student hand-in checklist],
@@ -69,8 +69,10 @@ pressure, and MiFID II governance.
 #v(0.6em)
 #text(size: 9pt, fill: luma(100))[
   _Still to build for classroom release: full teaching note (rubric + model answers) and a
-  student-facing PDF without this instructor page. Student deliverables are already in
-  Section 8. Reference MC pricer: `phoenix_mc_pricer.py` in the repo root._
+  student-facing PDF without this instructor page. Teaching note should reinforce: 27 Nov =
+  committee reference only; real desks reprice at issue (C1/C6); student MC stays frozen.
+  Student deliverables are already in Section 8. Reference MC pricer: `phoenix_mc_pricer.py`
+  in the repo root._
 ]
 
 #v(0.8em)

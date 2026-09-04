@@ -18,7 +18,8 @@
     *Case fiction.* Banque Meridian, ISIN, and terms are invented for this case study.
     Structure calibrated to standard EU retail *Phoenix* autocallables (cf. industry term sheets).
     Retail distributors sometimes label similar notes *Athena*; desk terminology reserves
-    *Athena* for structures where coupon and autocall share a single barrier.
+    *Athena* for structures where coupon and autocall share a single barrier. This note is
+    *Phoenix* (separate coupon and autocall barriers) — full desk distinction in case §4.
   ]
 ]
 

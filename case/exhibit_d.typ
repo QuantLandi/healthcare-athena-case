@@ -14,10 +14,10 @@
   width: 100%,
 )[
   #text(size: 9pt)[
-    *Case fiction.* Spot, OIS curve, and OIS discount factors below are *locked* for this
-    case (27 November 2026 snapshot). Volatility is a *desk range*; *credit spread* is
-    a choice from the ALM grid — choose and justify both. Terms in Exhibit A are the
-    *proposed* issue to be priced at this snapshot.
+    *Case fiction.* Spot, OIS curve, OIS discount factors, and desk-mid volatility below
+    are *locked* for this case (27 November 2026 snapshot). *Credit spread* is a choice
+    from the ALM grid — choose and justify. Vol ±1 pt is *repricing-risk* sensitivity only.
+    Terms in Exhibit A are the *proposed* issue to be priced at this snapshot.
   ]
 ]
 
@@ -32,7 +32,7 @@
   [*Initial Level $S_0$*], [EUR #initial-level (closing level, 27 November 2026) — *locked*],
   [*Coupon / capital barrier*], [60% × $S_0$ = EUR #coupon-barrier — *proposed* (Exhibit A)],
   [*Autocall barrier*], [100% × $S_0$ = EUR #initial-level — *proposed* (Exhibit A)],
-  [*Implied volatility $sigma$*], [*Student choice:* flat *16.00–18.00%* (Black / GBM); justify from context below],
+  [*Implied volatility $sigma$*], [Desk mid *17.00%* flat Black / GBM — *locked* for base case; ±1 vol-point sensitivity as issue-repricing risk],
   [*Dividend / decrement $q$*], [5.00% p.a. continuous — *locked*; do *not* add a further dividend yield],
   [*Discounting (hedge / index)*], [EUR OIS zeros in the observation-date table — *locked*],
   [*Credit spread (note CFs)*], [*Student choice* from the ALM grid below; apply only to coupons and redemption],
@@ -41,7 +41,7 @@
 
 Risk-neutral SDE for the *published decrement index*:
 
-$ d S_t = (r_t - q) S_t d t + sigma S_t d W_t^Q, quad q = 5%, quad sigma in [16%, 18%]. $
+$ d S_t = (r_t - q) S_t d t + sigma S_t d W_t^Q, quad q = 5%, quad sigma = 17% "(base)". $
 
 Build index paths with the OIS forwards implied by the table below. Discount *note*
 coupons and redemption with $ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $, where $s$ is
@@ -168,10 +168,12 @@ the reference for a reproducible Monte Carlo.
 
 == Volatility
 
-No listed options exist on ISX5HCTD. The desk works in a *16–18%* flat Black vol band, consistent with:
+No listed options exist on ISX5HCTD. Trading and the desk agree a *working mid* of *17%*
+flat Black vol for this snapshot, consistent with:
 
 - ~17% one-year realised vol on European healthcare indices in 2026;
-- VSTOXX (EURO STOXX 50, 30-day implied) in the mid-teens in August 2026.
+- VSTOXX (EURO STOXX 50, 30-day implied) in the mid-teens in August 2026;
+- the 5Y ATM column in the smile table below.
 
 #table(
   columns: (auto, auto, auto, auto),
@@ -185,8 +187,11 @@ No listed options exist on ISX5HCTD. The desk works in a *16–18%* flat Black v
   [5Y], [17.0%], [18.5%], [20.5%],
 )
 
-*Task:* pick one flat ATM vol (5Y column as anchor), state your source, and run ±2 vol-point sensitivities.
-The smile is *optional* extra credit; do not mix ATM and 60% vols in the same base-case path set.
+*Task:* price the base case at *17%* ATM (5Y column as anchor). Then re-price at *16%* and
+*18%* (±1 vol point) to show *issue-repricing risk* — how much margin would move if vol
+has shifted by the time the note prints. Do *not* adopt 16% or 18% as the committee base
+case to clear the floor; revise a product lever instead. The smile is *optional* extra
+credit; do not mix ATM and 60% vols in the same base-case path set.
 
 == Other desk assumptions
 
