@@ -47,12 +47,13 @@ a conditional coupon that sounds generous next to deposit rates. They want *fast
 turnaround when a theme is in the press. The head of Structured Products (Retail) sets a
 *minimum gross structuring margin* of *1.5%* of nominal on new issues — enough to cover
 distribution rebates, hedging slippage, and the occasional gap between internal model and
-street quote. Issues are almost always quoted to clients at *100%* of the €1,000 minimum
-denomination; economics live in the spread between *fair value* — the desk's model
-present value of the note's expected cash-flows under the locked market snapshot and
-documented assumptions (volatility, discounting) — and that 100% issue price. Fair value
-here is an issuer/structuring measure used to test the gross margin floor; it is not a
-client valuation or a distributor all-in price after rebates.
+street quote. End clients almost always buy at *100%* of the €1,000 denomination. That
+100% is the *retail offer price*, not a claim that every euro of margin stays with
+structuring: Meridian typically pays rebates or distribution fees to its own retail and
+private-banking networks, so *bank* economics after those transfers are tighter than the
+client-facing 100%. For this case, test the *gross* floor as fair value versus that 100%
+offer — fair value is the desk's model present value under the locked snapshot and
+documented assumptions; it is not a client mark-to-market and not an after-rebate all-in.
 
 Since late summer, *healthcare* has moved to the front of the thematic pipeline. Two
 August articles — an English-language adviser piece and a French retail-investor study —
@@ -170,7 +171,7 @@ for committee sign-off.
   [*Product*], [Healthcare Phoenix Autocallable Notes due 15 December 2031],
   [*Underlying*], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5% (EUR)],
   [*Structure*], [6% p.a. conditional coupon · 60% coupon/capital barrier · annual autocall at 100%],
-  [*Issue price*], [100% of €1,000 denomination],
+  [*Issue price*], [100% of €1,000 denomination (retail offer to end clients)],
   [*Target notional*], [EUR 50 million],
   [*Distribution*], [France (lead), Italy, Luxembourg],
   [*Terms*], [Attached summary term sheet — HC-PHX-047-TS],

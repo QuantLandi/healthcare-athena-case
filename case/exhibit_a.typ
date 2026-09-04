@@ -164,9 +164,11 @@ redemption is *EUR 1,000* plus the Coupon Amount. If the Index closes at #half-l
 
 == Issue price and expenses
 
-Notes are issued at *100.00%* of Specified Denomination. The Issuer's internal pricing target assumes
-a minimum *gross structuring margin* of *1.50%* of nominal to cover distribution and hedging costs.
-No separate management fee is deducted from Noteholders after issuance.
+Notes are offered to end clients at *100.00%* of Specified Denomination. The Issuer's
+internal pricing target assumes a minimum *gross structuring margin* of *1.50%* of nominal
+before distribution rebates / network fees paid inside Meridian — so bank economics after
+those transfers are not the same as the client 100%. No separate management fee is deducted
+from Noteholders after issuance. Students need not allocate the 1.5% among actors.
 
 == Observation schedule
 
