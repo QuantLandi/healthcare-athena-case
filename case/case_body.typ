@@ -172,7 +172,7 @@ for committee sign-off.
   [*Underlying*], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5% (EUR)],
   [*Structure*], [6% p.a. conditional coupon · 60% coupon/capital barrier · annual autocall at 100%],
   [*Issue price*], [100% of €1,000 denomination (retail offer to end clients)],
-  [*Target notional*], [EUR 50 million],
+  [*Target notional*], [EUR 20 million (programme target; not yet subscribed)],
   [*Distribution*], [France (lead), Italy, Luxembourg],
   [*Terms*], [Attached summary term sheet — HC-PHX-047-TS],
 )

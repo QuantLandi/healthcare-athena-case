@@ -38,7 +38,7 @@
   [*Guarantor*], [None — unsecured, unsubordinated obligations of Banque Meridian],
   [*Currency*], [EUR],
   [*Specified denomination*], [EUR 1,000 per Note],
-  [*Aggregate nominal amount*], [EUR 50,000,000],
+  [*Aggregate nominal amount*], [EUR 20,000,000 (target; subject to take-up)],
   [*Issue price*], [100.00% of Specified Denomination],
   [*Issue date / Settlement date*], [#sym.bracket.l 15 December 2026 #sym.bracket.r (expected, subject to committee approval on 1 December 2026)],
   [*Maturity date*], [15 December 2031 (5Y from expected issue; unless previously redeemed)],
