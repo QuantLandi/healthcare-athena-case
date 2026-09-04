@@ -291,7 +291,7 @@ once market data, barriers, and coupon mechanics are priced consistently.
 = 4. Product brief
 
 The proposed instrument is a five-year *Phoenix autocallable* on the Euro iSTOXX 50 Future
-Healthcare Tilted NR Decrement 5% index (EUR). In client language, it offers conditional
+Healthcare Tilted NR Decrement 5% index (ISX5HCTD, EUR). In client language, it offers conditional
 quarterly income with potential early redemption if the index is at or above its initial
 level on annual autocall dates. In desk language, it is a path-dependent structure whose
 economics are driven by three linked features: the quarterly coupon condition, annual
