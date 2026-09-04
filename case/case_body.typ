@@ -167,7 +167,7 @@ for committee sign-off.
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Product*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
+  [*Product*], [Healthcare Phoenix Autocallable Notes due 15 December 2031],
   [*Underlying*], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5% (EUR)],
   [*Structure*], [6% p.a. conditional coupon · 60% coupon/capital barrier · annual autocall at 100%],
   [*Issue price*], [100% of €1,000 denomination],

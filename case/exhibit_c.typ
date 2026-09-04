@@ -24,13 +24,13 @@
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
-  [*Product*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
+  [*Product*], [Healthcare Phoenix Autocallable Notes due 15 December 2031],
   [*Manufacturer / Issuer*], [Banque Meridian (Luxembourg)],
   [*Producer*], [Banque Meridian — Structured Products (Retail)],
   [*ISIN*], [XS2BM0HC2026],
   [*Currency*], [EUR],
   [*Issue price*], [100% per Note (€1,000 minimum denomination)],
-  [*Recommended holding period (RHP)*], [5 years (to 1 December 2031, unless autocalled earlier)],
+  [*Recommended holding period (RHP)*], [5 years (to 15 December 2031, unless autocalled earlier)],
 )
 
 == Summary risk indicator

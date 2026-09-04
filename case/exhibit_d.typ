@@ -110,7 +110,7 @@ curve and do *not* apply $s$ to index drift.
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   table.header([*Expected life*], [*Spread $s$ vs OIS*], [*Typical argument*]),
-  [1Y], [+10 bp], [First autocall is likely; note exits at 1 Dec 2027],
+  [1Y], [+10 bp], [First autocall is likely; note exits at 15 Dec 2027],
   [2Y], [+15 bp], [Expected exit around year 2, *or* clients rolled into a new theme],
   [3Y], [+20 bp], [Note more likely to survive early calls],
   [5Y], [+30 bp], [Conservative: fund as if held to scheduled maturity],
@@ -118,8 +118,8 @@ curve and do *not* apply $s$ to index drift.
 
 $ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $
 
-*Check:* at the first autocall date, $T = 1.0103$, $ "DF"_"OIS" = 0.97143$. With the 1Y
-spread $s = 10$ bp, $ "DF"_"note" = 0.97143 times e^(-0.0010 times 1.0103) approx 0.97045$.
+*Check:* at the first autocall date, $T = 1.0486$, $ "DF"_"OIS" = 0.97035$. With the 1Y
+spread $s = 10$ bp, $ "DF"_"note" = 0.97035 times e^(-0.0010 times 1.0486) approx 0.96933$.
 
 == Discount factors on observation dates
 
@@ -138,26 +138,26 @@ is used for index drift / hedge. Convert to note discount factors with the formu
       [$r$ *(cc)*],
       [*DF (OIS)*],
     ),
-    [1 Mar 2027], [Coupon], [0.2574], [2.36%], [0.99393],
-    [1 Jun 2027], [Coupon], [0.5092], [2.54%], [0.98717],
-    [1 Sep 2027], [Coupon], [0.7611], [2.71%], [0.97961],
-    [1 Dec 2027], [Coupon + autocall], [1.0103], [2.87%], [0.97143],
-    [1 Mar 2028], [Coupon], [1.2594], [2.89%], [0.96424],
-    [1 Jun 2028], [Coupon], [1.5113], [2.91%], [0.95692],
-    [1 Sep 2028], [Coupon], [1.7632], [2.94%], [0.94955],
-    [1 Dec 2028], [Coupon + autocall], [2.0123], [2.96%], [0.94222],
-    [1 Mar 2029], [Coupon], [2.2587], [2.97%], [0.93523],
-    [1 Jun 2029], [Coupon], [2.5106], [2.97%], [0.92809],
-    [1 Sep 2029], [Coupon], [2.7625], [2.98%], [0.92098],
-    [1 Dec 2029], [Coupon + autocall], [3.0116], [2.99%], [0.91397],
-    [1 Mar 2030], [Coupon], [3.2580], [2.99%], [0.90712],
-    [1 Jun 2030], [Coupon], [3.5099], [3.00%], [0.90015],
-    [1 Sep 2030], [Coupon], [3.7618], [3.00%], [0.89322],
-    [1 Dec 2030], [Coupon + autocall], [4.0110], [3.01%], [0.88638],
-    [1 Mar 2031], [Coupon], [4.2574], [3.01%], [0.87965],
-    [1 Jun 2031], [Coupon], [4.5092], [3.02%], [0.87281],
-    [1 Sep 2031], [Coupon], [4.7611], [3.02%], [0.86599],
-    [*1 Dec 2031*], [*Final / maturity*], [*5.0103*], [*3.03%*], [*0.85929*],
+    [15 Mar 2027], [Coupon], [0.2957], [2.36%], [0.99305],
+    [15 Jun 2027], [Coupon], [0.5476], [2.54%], [0.98619],
+    [15 Sep 2027], [Coupon], [0.7995], [2.71%], [0.97857],
+    [15 Dec 2027], [Coupon + autocall], [1.0486], [2.87%], [0.97035],
+    [15 Mar 2028], [Coupon], [1.2977], [2.89%], [0.96319],
+    [15 Jun 2028], [Coupon], [1.5496], [2.91%], [0.95591],
+    [15 Sep 2028], [Coupon], [1.8015], [2.94%], [0.94841],
+    [15 Dec 2028], [Coupon + autocall], [2.0507], [2.96%], [0.94111],
+    [15 Mar 2029], [Coupon], [2.2971], [2.97%], [0.93405],
+    [15 Jun 2029], [Coupon], [2.5489], [2.97%], [0.92709],
+    [15 Sep 2029], [Coupon], [2.8008], [2.98%], [0.91992],
+    [15 Dec 2029], [Coupon + autocall], [3.0500], [2.99%], [0.91284],
+    [15 Mar 2030], [Coupon], [3.2964], [2.99%], [0.90614],
+    [15 Jun 2030], [Coupon], [3.5483], [3.00%], [0.89902],
+    [15 Sep 2030], [Coupon], [3.8001], [3.00%], [0.89225],
+    [15 Dec 2030], [Coupon + autocall], [4.0493], [3.01%], [0.88525],
+    [15 Mar 2031], [Coupon], [4.2957], [3.01%], [0.87871],
+    [15 Jun 2031], [Coupon], [4.5476], [3.02%], [0.87168],
+    [15 Sep 2031], [Coupon], [4.7995], [3.02%], [0.86507],
+    [*15 Dec 2031*], [*Final / maturity*], [*5.0486*], [*3.03%*], [*0.85815*],
   ),
   caption: [Locked OIS discount factors for every coupon, autocall, and final-valuation date in Exhibit A.],
 )
