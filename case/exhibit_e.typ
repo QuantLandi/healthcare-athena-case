@@ -43,7 +43,7 @@ note is for *distribution positioning* only; competitor fair value is *not* prov
     [Product type], [Phoenix autocallable], [Athena autocallable (retail label)],
     [Issuer (public)], [European Investment Bank SA], [Major Italian retail bank (programme issuer)],
     [Underlying], [Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5%], [Same index (ISX5HCTD)],
-    [Issue / maturity], [1 Dec 2026 / 1 Dec 2031 (5Y)], [15 Sep 2026 / 15 Sep 2030 (4Y)],
+    [Issue / maturity], [#sym.bracket.l 15 Dec 2026 #sym.bracket.r / 1 Dec 2031 (5Y)], [15 Sep 2026 / 15 Sep 2030 (4Y)],
     [Issue price], [100%], [100%],
     [Conditional coupon], [6.00% p.a. (1.50% quarterly)], [6.25% p.a. (1.5625% quarterly)],
     [Coupon condition], [Index >= 60% of initial], [Index >= 62% of initial],

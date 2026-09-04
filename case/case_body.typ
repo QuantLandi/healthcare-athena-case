@@ -47,7 +47,11 @@ turnaround when a theme is in the press. The head of Structured Products (Retail
 *minimum gross structuring margin* of *1.5%* of nominal on new issues — enough to cover
 distribution rebates, hedging slippage, and the occasional gap between internal model and
 street quote. Issues are almost always quoted to clients at *100%* of the €1,000 minimum
-denomination; economics live in the spread between fair value and that issue price.
+denomination; economics live in the spread between *fair value* — the desk's model
+present value of the note's expected cash-flows under the locked market snapshot and
+documented assumptions (volatility, discounting) — and that 100% issue price. Fair value
+here is an issuer/structuring measure used to test the gross margin floor; it is not a
+client valuation or a distributor all-in price after rebates.
 
 Since late summer, *healthcare* has moved to the front of the thematic pipeline. Two
 August articles — an English-language adviser piece and a French retail-investor study —
@@ -64,9 +68,10 @@ before calendars shut and keep Meridian visible with key distributors.
 Over the past week you have assembled the working pack for a five-year *healthcare Phoenix*
 on the *Euro iSTOXX 50 Future Healthcare Tilted NR Decrement 5%* index: proposed terms
 (Exhibit A), market data as of the *27 November* trade date (Exhibit D), draft KID
-excerpts, and a competitor scan still being finalised (Exhibit E). The trade was fixed
-on Wednesday; issue and settlement are *today*, 1 December 2026. The Luxembourg pricing
-committee meets at 10:00.
+excerpts, and a competitor scan still being finalised (Exhibit E). Initial fixing on the
+index was set on *Wednesday 27 November*. The Luxembourg pricing committee meets *today*,
+1 December 2026, at 10:00. If validated, issue and settlement are expected around *two
+weeks* later — #sym.bracket.l 15 December 2026 #sym.bracket.r.
 
 You are expected to confirm that the proposed *6%* conditional coupon and *60%* barrier
 structure can be issued at *100%* with at least the desk's *1.5%* margin — or to explain
@@ -123,6 +128,11 @@ The email is reproduced as received; the memo follows.
   — MCF
 ]
 
+In desk usage, the *pricing pack* is the committee file you own: Monte Carlo (or
+equivalent) fair value and sensitivities at the locked 27 November snapshot, the
+proposed or revised terms, margin versus the 1.5% floor, and a one-page
+launch / revise / reject recommendation coherent with the KID draft.
+
 #v(0.8em)
 
 #align(center)[
@@ -139,7 +149,7 @@ The email is reproduced as received; the memo follows.
   stroke: 0.5pt + luma(200),
   [*Reference*], [BM-SP/2026/HC-PHX-047],
   [*Date*], [28 November 2026],
-  [*Issue date*], [1 December 2026 (trade fixed 27 November 2026)],
+  [*Expected issue date*], [#sym.bracket.l 15 December 2026 #sym.bracket.r (initial fixing 27 November 2026; committee 1 December 2026)],
   [*Owner*], [Junior structurer, Retail SP desk (Paris)],
   [*Committee*], [Luxembourg pricing committee — 1 Dec 2026, 10:00 CET],
 )
@@ -368,10 +378,11 @@ The following are fixed for this decision:
   stroke: 0.5pt + luma(200),
   [*Item*], [*Source / value*],
   [Trade date / initial fixing], [27 November 2026 · $S_0$ = 2,318.47 — Exhibit D],
-  [Issue date], [1 December 2026 (today)],
+  [Committee date], [1 December 2026 (today)],
+  [Expected issue date], [#sym.bracket.l 15 December 2026 #sym.bracket.r (if committee validates)],
   [Proposed structure], [6% p.a. conditional · 60% barrier · annual autocall at 100% — Exhibit A],
   [Issue price], [100% of €1,000 denomination],
-  [EUR discount curve], [Observation-date OIS discount factors — Exhibit D],
+  [EUR discount curve], [Observation-date OIS zeros — Exhibit D; optional +25 bp funded column for note cash-flows],
   [Index decrement], [5% p.a. continuous ($q$); already embedded in published index level],
   [Margin floor], [1.5% gross structuring margin to bank],
 )
@@ -386,9 +397,15 @@ Two areas require explicit assumptions in your presentation:
 + *Volatility.* No listed options exist on the decrement index. Exhibit D gives a desk
   working range of *16–18%* flat Black vol and sector context; you must choose one level,
   justify it, and show sensitivity (at minimum ±2 vol points).
-+ *Discounting convention.* Base case is OIS discounting from Exhibit D. A funding overlay
-  (+25 bp vs OIS) is sometimes applied to unsecured note cash-flows; the committee will
-  ask whether you used it and why.
++ *Discounting convention.* Base case is OIS discounting from Exhibit D (*DF (OIS)* in the
+  observation-date table). A *funding overlay* adds *+25 bp* to that zero curve when
+  discounting the note's own cash-flows (coupons and redemption) — a stylised stand-in for
+  unsecured *issuer funding / credit spread*, since the issuer does not borrow at OIS.
+  Exhibit D also publishes *DF (funded)* with this bump applied. Using the overlay lowers
+  model fair value and tightens margin versus OIS-only discounting. The desk typically
+  keeps the index/hedge leg on OIS and applies the overlay only to note liabilities; you
+  must state which column you used and why. The committee will not treat "OIS everywhere"
+  and "funded note cash-flows" as interchangeable.
 
 Everything else needed for a first-pass Monte Carlo fair value should flow from Exhibits A
 and D alone.

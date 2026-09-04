@@ -99,7 +99,8 @@ Linear interpolation of the continuously compounded zero is used between pillars
 == Discount factors on observation dates
 
 Time is measured from *27 November 2026* on an ACT/365.25 basis. *DF (OIS)* is the locked discount factor
-for expected Index-linked payoffs. *DF (funded)* applies the +25 bp overlay.
+for expected Index-linked payoffs. *DF (funded)* applies the +25 bp overlay to note cash-flows — a teaching
+shorthand for issuer funding spread on unsecured retail notes (see §5 judgement call).
 
 #figure(
   table(

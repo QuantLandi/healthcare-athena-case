@@ -24,3 +24,6 @@ __pycache__/
 # .typst/
 PLAN.md
 PUBLICATION_OUTLETS.md
+
+# Local feedback extraction (Word comments / transcripts)
+_feedback_extract/
