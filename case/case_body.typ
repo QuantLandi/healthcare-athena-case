@@ -330,7 +330,7 @@ terms). It focuses on *what decision is taken at each observation date*.
   [Quarterly coupon date], [Index < 60% of initial], [No coupon (non-memory; not recovered later)],
   [Annual autocall date], [Index >= 100% of initial], [Redeem at 100% + coupon due; note terminates],
   [Annual autocall date], [Index < 100% of initial], [No autocall; continue to next observation date],
-  [Final valuation (if not autocalled)], [Index >= 60% of initial], [Redeem 100% (+ final coupon if coupon condition met)],
+  [Final valuation (if not autocalled)], [Index >= 60% of initial], [Redeem 100% + final coupon],
   [Final valuation (if not autocalled)], [Index < 60% of initial], [Redeem 100% × (Final / Initial)],
 )
 

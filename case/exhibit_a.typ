@@ -151,7 +151,7 @@ Denomination if the Index is at or above the Coupon Barrier on that date; otherw
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   table.header([*Scenario*], [*Final Redemption Amount per Note*]),
-  [Index Level ≥ 60% × $S_0$ at Final Valuation], [100.00% of Specified Denomination + *Coupon Amount* (if any)],
+  [Index Level ≥ 60% × $S_0$ at Final Valuation], [100.00% of Specified Denomination + *Coupon Amount*],
   [Index Level < 60% × $S_0$ at Final Valuation], [
     $ "Specified Denomination" times "Index Level" / S_0 $
   ],
