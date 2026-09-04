@@ -183,8 +183,8 @@ broad index family is already in their pipeline (the competitor scan is still in
   [*Terms*], [Attached summary term sheet — HC-PHX-047-TS],
 )
 
-Issuer: *European Investment Bank SA* (Luxembourg) — existing programme issuer for Meridian
-retail notes. KID draft attached (pending your fair-value run).
+Issuer: *Banque Meridian* (Luxembourg) — own-name retail issuance; the desk both structures
+and books the note. KID draft attached (pending your fair-value run).
 
 == Commercial objectives
 
@@ -382,7 +382,8 @@ The following are fixed for this decision:
   [Expected issue date], [#sym.bracket.l 15 December 2026 #sym.bracket.r (if committee validates)],
   [Proposed structure], [6% p.a. conditional · 60% barrier · annual autocall at 100% — Exhibit A],
   [Issue price], [100% of €1,000 denomination],
-  [EUR discount curve], [Observation-date OIS zeros — Exhibit D; optional +25 bp funded column for note cash-flows],
+  [EUR discount curve], [Observation-date OIS zeros — Exhibit D (locked; hedge / index)],
+  [ALM credit grid], [Spreads vs OIS by expected life — Exhibit D; student chooses tenor],
   [Index decrement], [5% p.a. continuous ($q$); already embedded in published index level],
   [Margin floor], [1.5% gross structuring margin to bank],
 )
@@ -397,15 +398,16 @@ Two areas require explicit assumptions in your presentation:
 + *Volatility.* No listed options exist on the decrement index. Exhibit D gives a desk
   working range of *16–18%* flat Black vol and sector context; you must choose one level,
   justify it, and show sensitivity (at minimum ±2 vol points).
-+ *Discounting convention.* Base case is OIS discounting from Exhibit D (*DF (OIS)* in the
-  observation-date table). A *funding overlay* adds *+25 bp* to that zero curve when
-  discounting the note's own cash-flows (coupons and redemption) — a stylised stand-in for
-  unsecured *issuer funding / credit spread*, since the issuer does not borrow at OIS.
-  Exhibit D also publishes *DF (funded)* with this bump applied. Using the overlay lowers
-  model fair value and tightens margin versus OIS-only discounting. The desk typically
-  keeps the index/hedge leg on OIS and applies the overlay only to note liabilities; you
-  must state which column you used and why. The committee will not treat "OIS everywhere"
-  and "funded note cash-flows" as interchangeable.
++ *Credit spread (frais de crédit).* The OIS curve in Exhibit D is locked and is used for
+  the *index / hedge*. Coupons and redemption are unsecured liabilities of *Banque Meridian*:
+  they do *not* discount at OIS. Exhibit D gives Meridian ALM / treasury's short grid of
+  credit spreads versus OIS by *expected life*. You must (i) state an expected life — *1Y*
+  if you argue the note is likely to autocall at the first opportunity; longer if you expect
+  it to remain outstanding, or if redeemed clients will be rolled into a new theme —
+  (ii) take the matching spread $s$ from the grid, and (iii) discount note cash-flows
+  with $ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $ (Exhibit D). A wider spread lowers
+  fair value and improves modelled margin. Do not invent a spread outside the grid;
+  do not apply the spread to index drift.
 
 Everything else needed for a first-pass Monte Carlo fair value should flow from Exhibits A
 and D alone.
@@ -608,8 +610,8 @@ Option B.
     package.],
   [An explicit *volatility* choice within the Exhibit D working range, with justification
     and sensitivity at least ±2 vol points.],
-  [Whether OIS-only discounting or an unsecured funding overlay (+25 bp vs OIS) was used,
-    and why.],
+  [The *credit spread* taken from the Exhibit D ALM grid, the *expected life* used to
+    choose it, and a one-line justification.],
   [If margin is below the *1.5%* floor: *one* revised lever (coupon, barrier, autocall
     trigger, or issue price), re-priced margin, and a brief note on expected French /
     Italian distributor reaction.],

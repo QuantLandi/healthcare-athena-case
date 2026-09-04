@@ -15,7 +15,7 @@
   width: 100%,
 )[
   #text(size: 9pt)[
-    *Case fiction.* European Investment Bank SA, ISIN, and terms are invented for this case study.
+    *Case fiction.* Banque Meridian, ISIN, and terms are invented for this case study.
     Structure calibrated to standard EU retail *Phoenix* autocallables (cf. industry term sheets).
     Retail distributors sometimes label similar notes *Athena*; desk terminology reserves
     *Athena* for structures where coupon and autocall share a single barrier.
@@ -31,10 +31,10 @@
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   [*Product name*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
-  [*ISIN*], [XS2EIB0HC2026],
-  [*Common code*], [EIBHC2031],
-  [*Issuer*], [European Investment Bank SA (Luxembourg)],
-  [*Guarantor*], [European Investment Bank SA — unsecured, unsubordinated obligations],
+  [*ISIN*], [XS2BM0HC2026],
+  [*Common code*], [BMHC2031],
+  [*Issuer*], [Banque Meridian (Luxembourg)],
+  [*Guarantor*], [None — unsecured, unsubordinated obligations of Banque Meridian],
   [*Currency*], [EUR],
   [*Specified denomination*], [EUR 1,000 per Note],
   [*Aggregate nominal amount*], [EUR 50,000,000],
@@ -77,7 +77,7 @@ Coupons are *not memory-linked*: a missed coupon is not paid later.
   [*Coupon Barrier*], [60.00% × $S_0$ = EUR #coupon-barrier],
   [*Autocall Barrier*], [100.00% × $S_0$ = EUR #initial-level],
   [*Final Valuation Date*], [1 December 2031],
-  [*Calculation Agent*], [European Investment Bank SA],
+  [*Calculation Agent*], [Banque Meridian],
 )
 
 The Index reflects a tilted, decrement-adjusted segment of Euro STOXX healthcare-related constituents.
@@ -214,7 +214,7 @@ No separate management fee is deducted from Noteholders after issuance.
 
 == Principal risk factors (abridged)
 
-- *Issuer credit risk* — Notes are unsecured obligations of European Investment Bank SA. Holders bear full issuer default risk.
+- *Issuer credit risk* — Notes are unsecured obligations of Banque Meridian. Holders bear full issuer default risk.
 - *Market risk* — Below the 60% barrier at maturity, capital is reduced in proportion to the Index fall.
 - *Autocall risk* — Early redemption may reinvestment proceeds in lower-yielding environments.
 - *Liquidity risk* — No assured secondary market; bid/offer spreads may be wide.

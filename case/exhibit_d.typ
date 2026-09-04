@@ -14,10 +14,10 @@
   width: 100%,
 )[
   #text(size: 9pt)[
-    *Case fiction.* Spot, curve, and discount factors below are *locked* for this case
-    (27 November 2026 snapshot). Volatility is a *desk range* — choose and justify a flat
-    $sigma$ within it. Terms in Exhibit A are the *proposed* issue to be priced at this
-    snapshot.
+    *Case fiction.* Spot, OIS curve, and OIS discount factors below are *locked* for this
+    case (27 November 2026 snapshot). Volatility is a *desk range*; *credit spread* is
+    a choice from the ALM grid — choose and justify both. Terms in Exhibit A are the
+    *proposed* issue to be priced at this snapshot.
   ]
 ]
 
@@ -34,8 +34,8 @@
   [*Autocall barrier*], [100% × $S_0$ = EUR #initial-level — *proposed* (Exhibit A)],
   [*Implied volatility $sigma$*], [*Student choice:* flat *16.00–18.00%* (Black / GBM); justify from context below],
   [*Dividend / decrement $q$*], [5.00% p.a. continuous — *locked*; do *not* add a further dividend yield],
-  [*Discounting*], [EUR OIS zeros in the observation-date table — *locked*],
-  [*Funding (optional)*], [+25 bp to OIS zero — extra credit only; DF funded column],
+  [*Discounting (hedge / index)*], [EUR OIS zeros in the observation-date table — *locked*],
+  [*Credit spread (note CFs)*], [*Student choice* from the ALM grid below; apply only to coupons and redemption],
   [*Process*], [GBM under the risk-neutral measure; ~50,000 paths],
 )
 
@@ -43,7 +43,9 @@ Risk-neutral SDE for the *published decrement index*:
 
 $ d S_t = (r_t - q) S_t d t + sigma S_t d W_t^Q, quad q = 5%, quad sigma in [16%, 18%]. $
 
-Discount expected payoffs with the OIS discount factors below.
+Build index paths with the OIS forwards implied by the table below. Discount *note*
+coupons and redemption with $ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $, where $s$ is
+your chosen credit spread from the ALM grid (not OIS-only).
 
 == Underlying identifiers
 
@@ -96,15 +98,37 @@ calibrated to mid-August 2026 market levels (~2.91% 1Y / ~3.07% 5Y). Overnight: 
 Zeros are bootstrapped from the par swaps (annual fixed vs annual, teaching bootstrap — not an official ICE close).
 Linear interpolation of the continuously compounded zero is used between pillars.
 
+== ALM credit grid (note cash-flows)
+
+Treasury (*Banque Meridian* ALM) publishes the following *credit spreads vs OIS* for unsecured
+retail-note funding. Pick *one* tenor from *expected life* of the note (see §5). Apply that spread
+as a *flat* continuous bump $s$ to every note cash-flow; do *not* interpolate a new
+curve and do *not* apply $s$ to index drift.
+
+#table(
+  columns: (auto, auto, 1fr),
+  inset: 7pt,
+  stroke: 0.5pt + luma(200),
+  table.header([*Expected life*], [*Spread $s$ vs OIS*], [*Typical argument*]),
+  [1Y], [+10 bp], [First autocall is likely; note exits at 1 Dec 2027],
+  [2Y], [+15 bp], [Expected exit around year 2, *or* clients rolled into a new theme],
+  [3Y], [+20 bp], [Note more likely to survive early calls],
+  [5Y], [+30 bp], [Conservative: fund as if held to scheduled maturity],
+)
+
+$ "DF"_"note" (T) = "DF"_"OIS" (T) e^(-s T) $
+
+*Check:* at the first autocall date, $T = 1.0103$, $ "DF"_"OIS" = 0.97143$. With the 1Y
+spread $s = 10$ bp, $ "DF"_"note" = 0.97143 times e^(-0.0010 times 1.0103) approx 0.97045$.
+
 == Discount factors on observation dates
 
-Time is measured from *27 November 2026* on an ACT/365.25 basis. *DF (OIS)* is the locked discount factor
-for expected Index-linked payoffs. *DF (funded)* applies the +25 bp overlay to note cash-flows — a teaching
-shorthand for issuer funding spread on unsecured retail notes (see §5 judgement call).
+Time is measured from *27 November 2026* on an ACT/365.25 basis. *DF (OIS)* is locked and
+is used for index drift / hedge. Convert to note discount factors with the formula above.
 
 #figure(
   table(
-    columns: (auto, auto, auto, auto, auto, auto),
+    columns: (auto, auto, auto, auto, auto),
     inset: 5pt,
     stroke: 0.5pt + luma(200),
     table.header(
@@ -113,34 +137,34 @@ shorthand for issuer funding spread on unsecured retail notes (see §5 judgement
       [$T$ *(y)*],
       [$r$ *(cc)*],
       [*DF (OIS)*],
-      [*DF (funded)*],
     ),
-    [1 Mar 2027], [Coupon], [0.2574], [2.36%], [0.99393], [0.99330],
-    [1 Jun 2027], [Coupon], [0.5092], [2.54%], [0.98717], [0.98592],
-    [1 Sep 2027], [Coupon], [0.7611], [2.71%], [0.97961], [0.97775],
-    [1 Dec 2027], [Coupon + autocall], [1.0103], [2.87%], [0.97143], [0.96898],
-    [1 Mar 2028], [Coupon], [1.2594], [2.89%], [0.96424], [0.96121],
-    [1 Jun 2028], [Coupon], [1.5113], [2.91%], [0.95692], [0.95331],
-    [1 Sep 2028], [Coupon], [1.7632], [2.94%], [0.94955], [0.94537],
-    [1 Dec 2028], [Coupon + autocall], [2.0123], [2.96%], [0.94222], [0.93749],
-    [1 Mar 2029], [Coupon], [2.2587], [2.97%], [0.93523], [0.92996],
-    [1 Jun 2029], [Coupon], [2.5106], [2.97%], [0.92809], [0.92229],
-    [1 Sep 2029], [Coupon], [2.7625], [2.98%], [0.92098], [0.91464],
-    [1 Dec 2029], [Coupon + autocall], [3.0116], [2.99%], [0.91397], [0.90711],
-    [1 Mar 2030], [Coupon], [3.2580], [2.99%], [0.90712], [0.89976],
-    [1 Jun 2030], [Coupon], [3.5099], [3.00%], [0.90015], [0.89229],
-    [1 Sep 2030], [Coupon], [3.7618], [3.00%], [0.89322], [0.88486],
-    [1 Dec 2030], [Coupon + autocall], [4.0110], [3.01%], [0.88638], [0.87754],
-    [1 Mar 2031], [Coupon], [4.2574], [3.01%], [0.87965], [0.87034],
-    [1 Jun 2031], [Coupon], [4.5092], [3.02%], [0.87281], [0.86302],
-    [1 Sep 2031], [Coupon], [4.7611], [3.02%], [0.86599], [0.85574],
-    [*1 Dec 2031*], [*Final / maturity*], [*5.0103*], [*3.03%*], [*0.85929*], [*0.84859*],
+    [1 Mar 2027], [Coupon], [0.2574], [2.36%], [0.99393],
+    [1 Jun 2027], [Coupon], [0.5092], [2.54%], [0.98717],
+    [1 Sep 2027], [Coupon], [0.7611], [2.71%], [0.97961],
+    [1 Dec 2027], [Coupon + autocall], [1.0103], [2.87%], [0.97143],
+    [1 Mar 2028], [Coupon], [1.2594], [2.89%], [0.96424],
+    [1 Jun 2028], [Coupon], [1.5113], [2.91%], [0.95692],
+    [1 Sep 2028], [Coupon], [1.7632], [2.94%], [0.94955],
+    [1 Dec 2028], [Coupon + autocall], [2.0123], [2.96%], [0.94222],
+    [1 Mar 2029], [Coupon], [2.2587], [2.97%], [0.93523],
+    [1 Jun 2029], [Coupon], [2.5106], [2.97%], [0.92809],
+    [1 Sep 2029], [Coupon], [2.7625], [2.98%], [0.92098],
+    [1 Dec 2029], [Coupon + autocall], [3.0116], [2.99%], [0.91397],
+    [1 Mar 2030], [Coupon], [3.2580], [2.99%], [0.90712],
+    [1 Jun 2030], [Coupon], [3.5099], [3.00%], [0.90015],
+    [1 Sep 2030], [Coupon], [3.7618], [3.00%], [0.89322],
+    [1 Dec 2030], [Coupon + autocall], [4.0110], [3.01%], [0.88638],
+    [1 Mar 2031], [Coupon], [4.2574], [3.01%], [0.87965],
+    [1 Jun 2031], [Coupon], [4.5092], [3.02%], [0.87281],
+    [1 Sep 2031], [Coupon], [4.7611], [3.02%], [0.86599],
+    [*1 Dec 2031*], [*Final / maturity*], [*5.0103*], [*3.03%*], [*0.85929*],
   ),
-  caption: [Locked discount factors for every coupon, autocall, and final-valuation date in Exhibit A.],
+  caption: [Locked OIS discount factors for every coupon, autocall, and final-valuation date in Exhibit A.],
 )
 
-A constant 3.03% continuous rate (the 5Y zero) is acceptable for a *first pass*; the table above is the
-reference for a reproducible Monte Carlo.
+A constant 3.03% continuous rate (the 5Y zero) is acceptable for a *first pass* on
+index drift; still apply the chosen credit spread to note cash-flows. The table above is
+the reference for a reproducible Monte Carlo.
 
 == Volatility
 
@@ -172,8 +196,8 @@ The smile is *optional* extra credit; do not mix ATM and 60% vols in the same ba
   stroke: 0.5pt + luma(200),
   [*Repo / borrow*], [0 bp (cash equity index; no stock-loan)],
   [*Correlation*], [Not required (single underlying)],
-  [*Issuer funding*], [+25 bp vs OIS (optional overlay; DF funded column)],
-  [*Credit of hypothetical issuer*], [Unsecured notes; no CSA. Hedge is assumed OIS-discounted],
+  [*Credit spread*], [Student choice from ALM grid (+10 / +15 / +20 / +30 bp vs OIS)],
+  [*Credit of issuer*], [Banque Meridian — unsecured notes; no CSA. Hedge / index on OIS; note CFs on chosen Meridian ALM spread],
   [*Business days*], [As Exhibit A (Modified Following, Index Calculation Days)],
 )
 

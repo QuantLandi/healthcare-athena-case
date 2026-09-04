@@ -56,7 +56,7 @@
 #align(center)[
   #text(size: 14pt, weight: "bold")[Exhibit C — PRIIPs KID (Excerpt)]
   #v(0.2em)
-  #text(size: 9.5pt, fill: luma(100))[Draft · ISIN XS2EIB0HC2026]
+  #text(size: 9.5pt, fill: luma(100))[Draft · ISIN XS2BM0HC2026]
 ]
 #v(0.8em)
 #include "/case/exhibit_c.typ"

@@ -20,7 +20,8 @@ Model:
         dS = (r - q) S dt + sigma S dW,   q = 5% continuous
   - Flat Black volatility sigma (default sweep 16/17/18%; desk band 16-18%)
   - Forward rates between observation dates inferred from locked OIS discount factors
-  - Discount each cashflow with those OIS discount factors (Exhibit D)
+  - Discount *note* cash-flows with DF_note = DF_OIS * exp(-s T), s from Exhibit D ALM grid
+    (GBM drift stays on OIS; do not apply s to index paths)
 
 Implementation notes:
   - Paths are built with one cumulative sum over the observation grid, so there
@@ -46,7 +47,7 @@ Usage:
     uv run phoenix_mc_pricer.py --until-converged --sigma 0.17 --verbose
     uv run phoenix_mc_pricer.py --coupon-pa 0.05 --coupon-barrier 0.55
     uv run phoenix_mc_pricer.py --solve-margin          # coupon that clears 1.5%
-    uv run phoenix_mc_pricer.py --flat-rate 0.0303      # Exhibit D first-pass shortcut
+    uv run phoenix_mc_pricer.py --credit-spread-bp 15 --sigma 0.17
 
 Dependencies: numpy only.
 """
@@ -110,6 +111,15 @@ DFS = np.array([o.df_ois for o in OBSERVATIONS], dtype=np.float64)
 TIMES = np.array([o.t_years for o in OBSERVATIONS], dtype=np.float64)
 DT = np.diff(TIMES, prepend=0.0)  # trade date is t = 0
 SQRT_DT = np.sqrt(DT)
+
+
+def note_discount_factors(credit_spread: float) -> np.ndarray:
+    """OIS DFs bumped by a flat continuous credit spread s (Exhibit D ALM grid)."""
+    if credit_spread == 0.0:
+        return DFS
+    return DFS * np.exp(-credit_spread * TIMES)
+
+
 AUTOCALL_OBS_IDX = np.array(
     [j for j, o in enumerate(OBSERVATIONS) if o.event == "coupon_autocall"],
     dtype=int,
@@ -211,9 +221,16 @@ def levels_from_brownian(
     return np.exp(log_levels)
 
 
-def discounted_pv(levels: np.ndarray, terms: ProductTerms) -> np.ndarray:
+def discounted_pv(
+    levels: np.ndarray,
+    terms: ProductTerms,
+    credit_spread: float = 0.0,
+) -> np.ndarray:
     """
-    Present value per path (% of notional), OIS-discounted.
+    Present value per path (% of notional).
+
+    Index paths are built from OIS forwards. Note coupons and redemption use
+    DF_note = DF_OIS * exp(-s T) with s the ALM credit spread (default 0 = OIS).
 
     Vectorised implementation of Exhibit A payoff logic. We work in PV space
     (coupon x DF) because every cashflow is discounted at its observation
@@ -224,10 +241,11 @@ def discounted_pv(levels: np.ndarray, terms: ProductTerms) -> np.ndarray:
     that index; paths with no hit fall through to maturity logic.
     """
     n_paths = levels.shape[1]
+    df = note_discount_factors(credit_spread)
     coupon_pay = np.where(levels >= terms.coupon_barrier_level, terms.coupon_amount_pct, 0.0)
     # Prefix sum lets us pay only coupons earned *before* early exit without
     # looping path-by-path (coupons after autocall must not be counted).
-    cum_coupon_pv = np.cumsum(coupon_pay * DFS[:, None], axis=0)
+    cum_coupon_pv = np.cumsum(coupon_pay * df[:, None], axis=0)
 
     hit = levels[AUTOCALL_OBS_IDX, :] >= terms.autocall_barrier_level
     any_hit = hit.any(axis=0)
@@ -237,7 +255,7 @@ def discounted_pv(levels: np.ndarray, terms: ProductTerms) -> np.ndarray:
     exit_obs = np.where(any_hit, AUTOCALL_OBS_IDX[first_hit], FINAL_OBS)
 
     pv = cum_coupon_pv[exit_obs, np.arange(n_paths)]
-    autocall_notionals = np.where(any_hit, NOTIONAL * DFS[exit_obs], 0.0)
+    autocall_notionals = np.where(any_hit, NOTIONAL * df[exit_obs], 0.0)
 
     s_final = levels[FINAL_OBS, :]
     # Maturity: at or above the barrier pays par; below it the investor takes
@@ -246,8 +264,8 @@ def discounted_pv(levels: np.ndarray, terms: ProductTerms) -> np.ndarray:
         ~any_hit,
         np.where(
             s_final >= terms.coupon_barrier_level,
-            NOTIONAL * DFS[FINAL_OBS],
-            NOTIONAL * (s_final / S0) * DFS[FINAL_OBS],
+            NOTIONAL * df[FINAL_OBS],
+            NOTIONAL * (s_final / S0) * df[FINAL_OBS],
         ),
         0.0,
     )
@@ -325,6 +343,7 @@ def price_grid(
     seed: int | None = 42,
     antithetic: bool = True,
     flat_rate: float | None = None,
+    credit_spread: float = 0.0,
     verbose: bool = False,
 ) -> list[PriceResult]:
     """
@@ -362,7 +381,7 @@ def price_grid(
         brownian = brownian_grid(shocks)
         for sigma in sigmas:
             levels = levels_from_brownian(brownian, sigma, cum_drift)
-            stats[sigma].update(discounted_pv(levels, terms))
+            stats[sigma].update(discounted_pv(levels, terms, credit_spread))
         n_done += shocks.shape[1]
 
         if verbose:
@@ -402,6 +421,7 @@ def solve_coupon_for_margin(
     seed: int | None = 42,
     antithetic: bool = True,
     flat_rate: float | None = None,
+    credit_spread: float = 0.0,
     coupon_cap: float = 0.20,
     tol: float = 0.002,
     max_iter: int = 40,
@@ -426,6 +446,7 @@ def solve_coupon_for_margin(
             seed=seed,
             antithetic=antithetic,
             flat_rate=flat_rate,
+            credit_spread=credit_spread,
         )[0]
         return result.margin_pct, result
 
@@ -532,6 +553,7 @@ def main() -> None:
             "  uv run phoenix_mc_pricer.py --paths 50000\n"
             "  uv run phoenix_mc_pricer.py --until-converged --sigma 0.17 --verbose\n"
             "  uv run phoenix_mc_pricer.py --coupon-pa 0.05 --coupon-barrier 0.55\n"
+            "  uv run phoenix_mc_pricer.py --credit-spread-bp 15 --sigma 0.17\n"
             "  uv run phoenix_mc_pricer.py --solve-margin\n"
         ),
     )
@@ -620,6 +642,16 @@ def main() -> None:
         help="Print block-by-block progress.",
     )
     parser.add_argument(
+        "--credit-spread-bp",
+        type=float,
+        default=0.0,
+        metavar="BP",
+        help=(
+            "ALM credit spread in bp vs OIS, applied to note cash-flows only "
+            "(Exhibit D grid: 10, 15, 20, 30). Default 0 = OIS-only."
+        ),
+    )
+    parser.add_argument(
         "--flat-rate",
         type=float,
         default=None,
@@ -639,11 +671,16 @@ def main() -> None:
     )
     sigmas = [args.sigma] if args.sigma is not None else list(DEFAULT_SIGMAS)
     n_paths = args.paths if args.paths is not None else 50_000
+    credit_spread = args.credit_spread_bp / 10_000.0
     rate_mode = (
         f"flat r={args.flat_rate:.2%} (Exhibit D first-pass)"
         if args.flat_rate is not None
         else "DF-implied forward rates (Exhibit D table)"
     )
+    if args.credit_spread_bp:
+        rate_mode += f"; note CFs +{args.credit_spread_bp:.0f} bp credit"
+    else:
+        rate_mode += "; note CFs OIS-only (pass --credit-spread-bp)"
     run_mode = (
         f"until converged (SE <= {args.se_tol:.4f}%, "
         f"block={args.block_size:,}, min={args.min_paths:,}, max={args.max_paths:,})"
@@ -661,6 +698,7 @@ def main() -> None:
         seed=args.seed,
         antithetic=not args.no_antithetic,
         flat_rate=args.flat_rate,
+        credit_spread=credit_spread,
         verbose=args.verbose,
     )
     print_report(results, terms=terms, rate_mode=rate_mode, run_mode=run_mode)
@@ -677,6 +715,7 @@ def main() -> None:
                     seed=args.seed,
                     antithetic=not args.no_antithetic,
                     flat_rate=args.flat_rate,
+                    credit_spread=credit_spread,
                 ),
             )
             for sigma in sigmas

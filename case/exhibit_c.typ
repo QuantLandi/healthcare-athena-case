@@ -25,9 +25,9 @@
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   [*Product*], [Healthcare Phoenix Autocallable Notes due 1 December 2031],
-  [*Manufacturer / Issuer*], [European Investment Bank SA (Luxembourg)],
+  [*Manufacturer / Issuer*], [Banque Meridian (Luxembourg)],
   [*Producer*], [Banque Meridian — Structured Products (Retail)],
-  [*ISIN*], [XS2EIB0HC2026],
+  [*ISIN*], [XS2BM0HC2026],
   [*Currency*], [EUR],
   [*Issue price*], [100% per Note (€1,000 minimum denomination)],
   [*Recommended holding period (RHP)*], [5 years (to 1 December 2031, unless autocalled earlier)],
@@ -141,7 +141,7 @@ but both reflect issuer economics taken at subscription.
   are not paid later (*no memory*).
 - *Autocall risk* — Early redemption may occur in rising markets; reinvestment may be
   at lower yields.
-- *Issuer risk* — If European Investment Bank SA fails, you may receive nothing.
+- *Issuer risk* — If Banque Meridian fails, you may receive nothing.
 - *Liquidity risk* — No assured secondary market.
 
 == Desk note (not part of official KID)
