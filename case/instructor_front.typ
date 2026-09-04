@@ -60,7 +60,7 @@ pressure, and MiFID II governance.
   [Case §8], [Deliverables · student hand-in checklist],
   [Exhibit A], [Term sheet],
   [Exhibit B1], [FT Adviser excerpt (EN)],
-  [Exhibit B2], [Les Echos Investir excerpt (FR)],
+  [Exhibit B2], [Les Echos Investir excerpt (FR + EN translation)],
   [Exhibit C], [PRIIPs KID excerpt (draft)],
   [Exhibit D], [Market data · 27 Nov 2026 snapshot],
   [Exhibit E], [Competitor scan (Italy)],

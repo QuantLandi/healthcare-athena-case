@@ -28,7 +28,7 @@ Case study for advanced finance courses: price and launch a **Phoenix autocallab
 |---------|-------------|--------|
 | **A** | Anonymized Phoenix term sheet | [`case/exhibit_a.typ`](case/exhibit_a.typ) |
 | **B1** | FT Adviser summary (EN) | [`case/exhibit_b1.typ`](case/exhibit_b1.typ) |
-| **B2** | Les Echos Investir summary (FR) | [`case/exhibit_b2.typ`](case/exhibit_b2.typ) |
+| **B2** | Les Echos Investir summary (FR + EN) | [`case/exhibit_b2.typ`](case/exhibit_b2.typ) |
 | **C** | PRIIPs KID excerpt | [`case/exhibit_c.typ`](case/exhibit_c.typ) |
 | **D** | Market data (27 Nov 2026) | [`case/exhibit_d.typ`](case/exhibit_d.typ) |
 | **E** | Competitor scan (Italy) | [`case/exhibit_e.typ`](case/exhibit_e.typ) |

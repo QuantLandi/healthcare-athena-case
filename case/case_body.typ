@@ -263,6 +263,10 @@ visibility to renewed M&A by large pharmaceutical groups:
   Après ce regain de visibilité, les big pharmas se sont senties beaucoup plus à l'aise
   pour délier leur bourse ... On a assisté à un retour en force des fusions-acquisitions.
 ]
+#text(size: 9pt, fill: luma(100))[
+  _EN:_ “After this regain in visibility, the big pharmas felt much more comfortable opening
+  their purses ... We saw a strong return of mergers and acquisitions.” (Exhibit B2)
+]
 
 For Italian distributors, the trigger is different: competitor activity and headline
 economics on comparable certificates, not French media coverage itself.

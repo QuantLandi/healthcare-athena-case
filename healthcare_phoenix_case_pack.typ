@@ -43,15 +43,12 @@
 
 #pagebreak()
 #align(center)[
-  #text(size: 14pt, weight: "bold")[Exhibit B2 — Extrait presse (français)]
+  #text(size: 14pt, weight: "bold")[Exhibit B2 — Press excerpt (French + English)]
   #v(0.2em)
-  #text(size: 9.5pt, fill: luma(100))[Les Echos Investir · 13 août 2026]
+  #text(size: 9.5pt, fill: luma(100))[Les Echos Investir · 13 August 2026 · FR original with EN translation]
 ]
 #v(0.8em)
-#set text(lang: "fr")
 #include "/case/exhibit_b2.typ"
-#set text(lang: "en")
-
 #pagebreak()
 #align(center)[
   #text(size: 14pt, weight: "bold")[Exhibit C — PRIIPs KID (Excerpt)]
