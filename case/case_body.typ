@@ -29,10 +29,11 @@ issuance, however, is convened in *Luxembourg*, where the bank's structured-prod
 platform books most EU retail notes. On issue days you work with both locations remotely until
 the committee meets: Paris for distributor dialogue, Luxembourg for governance and sign-off.
 
-Banque Meridian distributes through branch networks and external platforms in *France*,
-*Italy*, and *Luxembourg*. Retail structured products remain a meaningful fee pool for the
-bank, but the regulatory environment has tightened. *MiFID II* product-governance rules
-require a documented target market, and every retail note must ship with a *PRIIPs Key
+Banque Meridian distributes through its own retail and private-banking networks in
+*France*, *Italy*, and *Luxembourg*. For this launch, distribution stays on those Meridian
+channels — not third-party platforms. Retail structured products remain a meaningful fee
+pool for the bank, but the regulatory environment has tightened. *MiFID II* product-governance
+rules require a documented target market, and every retail note must ship with a *PRIIPs Key
 Information Document* (KID) whose prescribed scenarios can read very differently from the
 headline coupon on a term sheet. Compliance sits one floor above you; they are helpful,
 but they will not sign a KID that your fair-value work cannot support.
