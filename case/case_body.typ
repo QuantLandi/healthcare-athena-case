@@ -120,7 +120,7 @@ The email is reproduced as received; the memo follows.
 
   Attached is the launch memo for the Luxembourg pricing committee on *Monday 1 December,
   10:00*. You own the pack — this is your first full retail sign-off, so I will review
-  your numbers Sunday night, but *you* present fair value and the launch recommendation.
+  your numbers Monday at *08:00*, but *you* present fair value and the launch recommendation.
 
   Target remains *100% issue* and *≥ 1.5%* gross margin. If you cannot get there, come
   with revised terms — do not ask the committee to approve a loss leader.
@@ -232,7 +232,7 @@ autocall, or issue-price parameters and a clear *launch / revise / reject* recom
   inset: 6pt,
   stroke: 0.5pt + luma(200),
   table.header([*Role*], [*Name*], [*Action*]),
-  [Head of SP (Retail)], [M.-C. Fontaine], [Review Sunday PM],
+  [Head of SP (Retail)], [M.-C. Fontaine], [Review Monday 08:00],
   [Junior structurer (owner)], [You], [Present FV + recommendation, 1 Dec],
   [Compliance], [PRIIPs / target market], [KID sign-off if launch],
   [Pricing committee], [Luxembourg], [Approve / reject / revise terms],
