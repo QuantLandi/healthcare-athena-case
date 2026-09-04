@@ -135,25 +135,25 @@ Following autocall, no further amounts are payable and the Notes are cancelled.
 == Redemption at maturity
 
 If not previously redeemed, each Note shall be redeemed on the Maturity Date at an amount
-determined by the Calculation Agent as follows:
+determined by the Calculation Agent as follows.
+
+*Coupon Amount* has the meaning in *Conditional coupons* above: $1.50%$ of Specified
+Denomination if the Index is at or above the Coupon Barrier on that date; otherwise zero.
 
 #table(
   columns: (auto, 1fr),
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   table.header([*Scenario*], [*Final Redemption Amount per Note*]),
-  [Index Level ≥ Coupon Barrier on Final Valuation Date], [
-    Pay any *Coupon Amount* due on the Final Valuation Date (1.50% if condition met), plus:
-  ],
-  [Index Level ≥ 60% × $S_0$ at Final Valuation], [100.00% of Specified Denomination + final coupon (if any)],
+  [Index Level ≥ 60% × $S_0$ at Final Valuation], [100.00% of Specified Denomination + *Coupon Amount* (if any)],
   [Index Level < 60% × $S_0$ at Final Valuation], [
     $ "Specified Denomination" times "Index Level" / S_0 $
   ],
 )
 
 *Example (Final Valuation):* if $S_0 = #initial-level " EUR" $ and the Index closes at #coupon-barrier (60.00% of Initial Level),
-redemption is *EUR 1,000*. If the Index closes at #half-level (50.00% of Initial Level), redemption is *EUR 500* per Note
-(before any final coupon).
+redemption is *EUR 1,000* plus the Coupon Amount. If the Index closes at #half-level (50.00% of Initial Level), redemption is *EUR 500* per Note
+(no Coupon Amount).
 
 == Issue price and expenses
 
