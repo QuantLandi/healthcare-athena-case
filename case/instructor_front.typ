@@ -79,7 +79,10 @@ pressure, and MiFID II governance.
 == Acknowledgements
 
 #text(size: 9.5pt)[
-  Thanks to *Massimo Passamonti* for expert feedback on product mechanics and terminology.
+  Thanks to *Massimo Passamonti* for expert feedback on product mechanics and terminology,
+  and to *Johann Barchechath* for a detailed review of the case: timeline and issuance
+  process, commercial framing (issue price, rebates, notional), volatility as repricing
+  risk versus product levers, and credit-spread / ALM treatment.
 ]
 
 #pagebreak()

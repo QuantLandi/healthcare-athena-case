@@ -133,7 +133,7 @@ Exhibits B1 and B2 are **abridged summaries**, not full reproductions.
 
 ## Acknowledgements
 
-Thanks to [Massimo Passamonti](https://www.linkedin.com/in/massimo-passamonti/) for expert feedback on product mechanics and terminology.
+Thanks to [Massimo Passamonti](https://www.linkedin.com/in/massimo-passamonti/) for expert feedback on product mechanics and terminology, and to [Johann Barchechath](https://www.linkedin.com/in/johann-barchechath/) for a detailed review of the case: timeline and issuance process, commercial framing (issue price, rebates, notional), volatility as repricing risk versus product levers, and credit-spread / ALM treatment.
 
 ---
 
