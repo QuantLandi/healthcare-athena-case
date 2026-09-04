@@ -300,8 +300,7 @@ Desk terminology distinguishes *Phoenix* from classic *Athena*: a Phoenix has *s
 coupon and autocall barriers, and pays a conditional coupon whenever the coupon condition
 is met — even if the note is not autocalled. A classic *Athena* aligns those barriers;
 coupons are typically accumulated and paid together with redemption when the autocall
-trigger fires. This transaction is a Phoenix (60% coupon barrier, 100% autocall barrier,
-non-memory coupons). Retail marketing may still use *Athena* on similar notes; the term
+trigger fires. Retail marketing may still use *Athena* on similar notes; the term
 sheet in Exhibit A follows desk naming.
 
 For this transaction, headline terms are:
