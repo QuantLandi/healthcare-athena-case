@@ -484,11 +484,13 @@ teased with a "6% healthcare income" headline.
 
 == Committee pressure points
 
-The discussion quickly narrows to four pressure points:
+The discussion quickly narrows to five pressure points:
 
 - *Economics:* whether the proposed package can clear the 1.5% margin floor at 100% issue.
 - *Commercial credibility:* how far terms can move before French and Italian distributors
   perceive a bait-and-switch.
+- *Fit and priorities:* product–target-market fit, sales wording, and ranking versus other
+  offers on the desk — not only fair value and margin.
 - *KID coherence:* whether moderate-scenario disclosures remain defensible under the chosen
   volatility and discounting assumptions.
 - *Execution timing:* whether there is enough time to revise terms and still hit year-end
