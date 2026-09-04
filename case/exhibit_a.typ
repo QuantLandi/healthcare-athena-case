@@ -92,11 +92,16 @@ observation dates only (not on dividends separately distributed by index constit
   inset: 7pt,
   stroke: 0.5pt + luma(200),
   [*Trade Date / Initial Fixing*], [27 November 2026],
-  [*Issue Date*], [#sym.bracket.l 15 December 2026 #sym.bracket.r (expected)],
+  [*Issue Date*], [#sym.bracket.l 15 December 2026 #sym.bracket.r (expected; ≈ T+2 weeks from trade)],
   [*First Coupon Observation*], [1 March 2027],
   [*First Autocall Observation*], [1 December 2027],
   [*Scheduled Maturity*], [1 December 2031],
 )
+
+#text(size: 9pt, fill: luma(100))[
+  _Dates in square brackets are expected only — not yet fixed; they move if committee
+  revises the launch or settlement slips._
+]
 
 *Day-count:* ACT/360 for coupon accrual display purposes; coupons paid as flat percentages of denomination.
 
